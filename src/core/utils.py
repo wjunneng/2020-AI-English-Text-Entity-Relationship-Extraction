@@ -92,34 +92,44 @@ def extract_items(subject_model, object_model, tokenizer, text_in, id2rel, h_bar
         return []
 
 
-def extract_items_new(subject, object_model, tokenizer, text_in, id2rel, h_bar=0.5, t_bar=0.5):
-    tokens = tokenizer.tokenize(text_in)
-    print(tokens)
-
+def get_start_end_index(tokens, target):
+    """
+    获取subject/object index
+    :param tokens:
+    :param target:
+    :return:
+    """
     token_index = 0
-    subject_start_index, subject_end_index = -1, -1
-    subject_ = subject.replace(' ', '[unused1]')
+    start_index, end_index = -1, -1
+    target_ = target.replace(' ', '[unused1]')
 
-    while subject_ != '':
+    while target_ != '':
         token_text = tokens[token_index].replace('##', '')
-        if token_text == subject_[:len(token_text)]:
-            if subject_start_index == -1:
-                subject_start_index = token_index
+        if token_text == target_[:len(token_text)]:
+            if start_index == -1:
+                start_index = token_index
             else:
-                subject_end_index = token_index
+                end_index = token_index
 
-            subject_ = subject_[len(token_text):]
+            target_ = target_[len(token_text):]
         else:
-            subject_start_index, subject_end_index = -1, -1
-            subject_ = subject.replace(' ', '[unused1]')
+            start_index, end_index = -1, -1
+            target_ = target.replace(' ', '[unused1]')
 
         token_index += 1
 
-    if subject_end_index == -1:
-        subject_end_index = subject_start_index + 1
+    if end_index == -1:
+        end_index = start_index + 1
+
+    return start_index, end_index
+
+
+def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel, h_bar=0.5, t_bar=0.5):
+    tokens = tokenizer.tokenize(text_in)
+    subject_start_index, subject_end_index = get_start_end_index(tokens=tokens, target=subject)
+    object_start_index, object_end_index = get_start_end_index(tokens=tokens, target=object)
 
     subjects = [([subject], subject_start_index, subject_end_index)]
-    print('subjects: {}'.format(subjects))
     token_ids, segment_ids = tokenizer.encode(first=text_in)
     token_ids, segment_ids = np.array([token_ids]), np.array([segment_ids])
     # [(['indicator'], 6, 7)]
@@ -133,7 +143,11 @@ def extract_items_new(subject, object_model, tokenizer, text_in, id2rel, h_bar=0
             sub = subject[0]
             sub = ''.join([i.lstrip("##") for i in sub])
             sub = ' '.join(sub.split('[unused1]'))
-            obj_heads, obj_tails = np.where(obj_heads_logits[i] > h_bar), np.where(obj_tails_logits[i] > t_bar)
+            # obj_heads, obj_tails = np.where(obj_heads_logits[i] > h_bar), np.where(obj_tails_logits[i] > t_bar)
+            obj_heads, obj_tails = (np.asarray([object_start_index]),
+                                    np.asarray([np.argmax(obj_heads_logits[:, object_start_index])])), (
+                                       np.asarray([object_end_index]),
+                                       np.asarray([np.argmax(obj_tails_logits[:, object_end_index])]))
             for obj_head, rel_head in zip(*obj_heads):
                 for obj_tail, rel_tail in zip(*obj_tails):
                     if obj_head <= obj_tail and rel_head == rel_tail:
@@ -149,6 +163,33 @@ def extract_items_new(subject, object_model, tokenizer, text_in, id2rel, h_bar=0
         return list(triple_set)
     else:
         return []
+
+    # if subjects:
+    #     triple_list = []
+    #     token_ids = np.repeat(token_ids, len(subjects), 0)
+    #     segment_ids = np.repeat(segment_ids, len(subjects), 0)
+    #     sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
+    #     obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
+    #     for i, subject in enumerate(subjects):
+    #         sub = subject[0]
+    #         sub = ''.join([i.lstrip("##") for i in sub])
+    #         sub = ' '.join(sub.split('[unused1]'))
+    #         obj_heads, obj_tails = np.where(obj_heads_logits[i] > h_bar), np.where(obj_tails_logits[i] > t_bar)
+    #         for obj_head, rel_head in zip(*obj_heads):
+    #             for obj_tail, rel_tail in zip(*obj_tails):
+    #                 if obj_head <= obj_tail and rel_head == rel_tail:
+    #                     rel = id2rel[rel_head]
+    #                     obj = tokens[obj_head: obj_tail]
+    #                     obj = ''.join([i.lstrip("##") for i in obj])
+    #                     obj = ' '.join(obj.split('[unused1]'))
+    #                     triple_list.append((sub, rel, obj))
+    #                     break
+    #     triple_set = set()
+    #     for s, r, o in triple_list:
+    #         triple_set.add((s, r, o))
+    #     return list(triple_set)
+    # else:
+    #     return []
 
 
 def partial_match(pred_set, gold_set):
@@ -175,10 +216,14 @@ def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_matc
         # ############# 原始 #############
 
         # ############# 更改 #############
+        print('\n')
         print('text: {}'.format(line['text']))
         subject = line['triple_list'][0][0]
-        print('subject: {}'.format(subject))
-        Pred_triples = set(extract_items_new(subject, object_model, tokenizer, line['text'], id2rel))
+        object = line['triple_list'][0][2]
+        print('subject: {}, object: {}'.format(subject, object))
+        Pred_triples = set(extract_items_new(subject=subject, object=object, object_model=object_model,
+                                             tokenizer=tokenizer, text_in=line['text'], id2rel=id2rel))
+        print('pred_triples: {}'.format(Pred_triples))
         # ############# 更改 #############
 
         Gold_triples = set(line['triple_list'])

@@ -13,6 +13,7 @@ from tqdm import tqdm
 import json
 import random
 import numpy as np
+import re
 
 from src.conf.config import PATH
 
@@ -73,13 +74,38 @@ class Util(object):
         # 'text', 'label'
         train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
 
-        rel2id_json = set(train_df['label'].values.tolist())
+        result = []
         for train_index in range(train_df.shape[0]):
             text = train_df.iloc[train_index, 0]
             label = train_df.iloc[train_index, 1]
 
-        print(rel2id_json)
-        print(train_df.columns)
+            sample = {}
+            subject = re.split('<e1>|</e1>', text)[1]
+            object = re.split('<e2>|</e2>', text)[1]
+
+            text = text.strip('"')
+            text = text.replace('<e1>' + subject + '</e1>', subject)
+            text = text.replace('<e2>' + object + '</e2>', object)
+
+            sample['text'] = text
+            sample['triple_list'] = [[subject, label, object]]
+
+            result.append(sample)
+
+        random.shuffle(result)
+
+        result_length = len(result)
+        train_result = result[:int(result_length * 0.8)]
+        dev_result = result[int(result_length * 0.8):]
+
+        with open(self.train_json_path, encoding='utf-8', mode='w') as file:
+            json.dump(obj=train_result, ensure_ascii=False, fp=file)
+
+        with open(self.dev_json_path, encoding='utf-8', mode='w') as file:
+            json.dump(obj=dev_result, ensure_ascii=False, fp=file)
+
+        with open(self.test_json_path, encoding='utf-8', mode='w') as file:
+            json.dump(obj=dev_result, ensure_ascii=False, fp=file)
 
 
 if __name__ == '__main__':

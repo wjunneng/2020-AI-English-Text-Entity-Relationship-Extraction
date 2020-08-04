@@ -12,18 +12,18 @@ os.chdir(sys.path[0])
 class PATH(object):
     DATA_DIR = os.path.join(project_dir, 'data')
     INPUT_DIR = os.path.join(DATA_DIR, 'input')
-    OUPUT_DIR = os.path.join(DATA_DIR, 'output')
+    OUTPUT_DIR = os.path.join(DATA_DIR, 'output')
 
-    CHINESE_WWM_PYTORCH_DIR = os.path.join(DATA_DIR, 'model', 'uncased_L-12_H-768_A-12')
+    PRE_TRAIN_MODEL_DIR = os.path.join(DATA_DIR, 'model', 'uncased_L-12_H-768_A-12')
 
     train_csv_path = os.path.join(INPUT_DIR, 'train.csv')
     test_csv_path = os.path.join(INPUT_DIR, 'test.csv')
 
-    train_json_path = os.path.join(OUPUT_DIR, 'train.json')
-    dev_json_path = os.path.join(OUPUT_DIR, 'dev.json')
-    test_json_path = os.path.join(OUPUT_DIR, 'test.json')
+    train_json_path = os.path.join(OUTPUT_DIR, 'train.json')
+    dev_json_path = os.path.join(OUTPUT_DIR, 'dev.json')
+    test_json_path = os.path.join(OUTPUT_DIR, 'test.json')
 
-    rel2id_json_path = os.path.join(OUPUT_DIR, 'rel2id.json')
+    rel2id_json_path = os.path.join(OUTPUT_DIR, 'rel2id.json')
 
     submit_csv_path = os.path.join(INPUT_DIR, 'submit.csv')
 

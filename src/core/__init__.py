@@ -206,4 +206,13 @@ a = np.asarray([[6.36160374e-03, 1.80602074e-05, 1.65104866e-05, 3.27825546e-07
                     , 5.69224358e-06, 3.01654041e-02, 1.59144402e-05, 8.34465027e-06
                     , 1.24596918e-05, 3.83677752e-06, 2.67097639e-05]])
 
-print(np.argmax(a[:, 14]))
+# print(a[:, 14])
+# index_score_dict = dict(zip(list(np.argsort(-a[:, 14])), [i for i in range(len(a[:, 14]))]))
+# index_score_dict = dict(sorted(index_score_dict.items(), key=lambda a: a[0]))
+# print(index_score_dict)
+
+a = np.array([1, 2, 3])
+b = np.array([2, 3, 2])
+
+c = np.sum([a, b], axis=0)
+print(c)

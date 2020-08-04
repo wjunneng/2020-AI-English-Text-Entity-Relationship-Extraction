@@ -134,14 +134,14 @@
     "triple_list_pred": [
         {
             "subject": "aristocracy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "laws"
         }
     ],
     "new": [
         {
             "subject": "aristocracy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "laws"
         }
     ],
@@ -165,14 +165,14 @@
     "triple_list_pred": [
         {
             "subject": "man",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "truck"
         }
     ],
     "new": [
         {
             "subject": "man",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "truck"
         }
     ],
@@ -258,14 +258,14 @@
     "triple_list_pred": [
         {
             "subject": "Lesions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "leg "
         }
     ],
     "new": [
         {
             "subject": "Lesions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "leg "
         }
     ],
@@ -289,14 +289,14 @@
     "triple_list_pred": [
         {
             "subject": "president",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "veto "
         }
     ],
     "new": [
         {
             "subject": "president",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "veto "
         }
     ],
@@ -413,14 +413,14 @@
     "triple_list_pred": [
         {
             "subject": "focus",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "ethics"
         }
     ],
     "new": [
         {
             "subject": "focus",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "ethics"
         }
     ],
@@ -568,14 +568,14 @@
     "triple_list_pred": [
         {
             "subject": "products",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "charities"
         }
     ],
     "new": [
         {
             "subject": "products",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "charities"
         }
     ],
@@ -785,14 +785,14 @@
     "triple_list_pred": [
         {
             "subject": "questions",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "exhibition"
         }
     ],
     "new": [
         {
             "subject": "questions",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "exhibition"
         }
     ],
@@ -909,14 +909,14 @@
     "triple_list_pred": [
         {
             "subject": "resume",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "transition"
         }
     ],
     "new": [
         {
             "subject": "resume",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "transition"
         }
     ],
@@ -940,14 +940,14 @@
     "triple_list_pred": [
         {
             "subject": "unions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "walk"
         }
     ],
     "new": [
         {
             "subject": "unions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "walk"
         }
     ],
@@ -1095,14 +1095,14 @@
     "triple_list_pred": [
         {
             "subject": "visitors",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "water"
         }
     ],
     "new": [
         {
             "subject": "visitors",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "water"
         }
     ],
@@ -1436,14 +1436,14 @@
     "triple_list_pred": [
         {
             "subject": "emigrants",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "lowlands"
         }
     ],
     "new": [
         {
             "subject": "emigrants",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "lowlands"
         }
     ],
@@ -1622,14 +1622,14 @@
     "triple_list_pred": [
         {
             "subject": "forum",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dropship"
         }
     ],
     "new": [
         {
             "subject": "forum",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dropship"
         }
     ],
@@ -2025,14 +2025,14 @@
     "triple_list_pred": [
         {
             "subject": "bag",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "crate"
         }
     ],
     "new": [
         {
             "subject": "bag",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "crate"
         }
     ],
@@ -2769,14 +2769,14 @@
     "triple_list_pred": [
         {
             "subject": "companies",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "governments"
         }
     ],
     "new": [
         {
             "subject": "companies",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "governments"
         }
     ],
@@ -2862,14 +2862,14 @@
     "triple_list_pred": [
         {
             "subject": "products",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "areas"
         }
     ],
     "new": [
         {
             "subject": "products",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "areas"
         }
     ],
@@ -2955,14 +2955,14 @@
     "triple_list_pred": [
         {
             "subject": "acid",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "species"
         }
     ],
     "new": [
         {
             "subject": "acid",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "species"
         }
     ],
@@ -3296,14 +3296,14 @@
     "triple_list_pred": [
         {
             "subject": "drawer",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "coffee"
         }
     ],
     "new": [
         {
             "subject": "drawer",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "coffee"
         }
     ],
@@ -3358,14 +3358,14 @@
     "triple_list_pred": [
         {
             "subject": "copper",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mold"
         }
     ],
     "new": [
         {
             "subject": "copper",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mold"
         }
     ],
@@ -3451,14 +3451,14 @@
     "triple_list_pred": [
         {
             "subject": "flower",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "people"
         }
     ],
     "new": [
         {
             "subject": "flower",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "people"
         }
     ],
@@ -3606,14 +3606,14 @@
     "triple_list_pred": [
         {
             "subject": "pan",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Content-Container(e2,e1)",
             "object": "spaghetti"
         }
     ],
     "new": [
         {
             "subject": "pan",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Content-Container(e2,e1)",
             "object": "spaghetti"
         }
     ],
@@ -3699,14 +3699,14 @@
     "triple_list_pred": [
         {
             "subject": "game",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "packing"
         }
     ],
     "new": [
         {
             "subject": "game",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "packing"
         }
     ],
@@ -3761,14 +3761,14 @@
     "triple_list_pred": [
         {
             "subject": "Poems",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "site"
         }
     ],
     "new": [
         {
             "subject": "Poems",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "site"
         }
     ],
@@ -4071,14 +4071,14 @@
     "triple_list_pred": [
         {
             "subject": "brain cells",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dish"
         }
     ],
     "new": [
         {
             "subject": "brain cells",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dish"
         }
     ],
@@ -4319,14 +4319,14 @@
     "triple_list_pred": [
         {
             "subject": "bees",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "nectar"
         }
     ],
     "new": [
         {
             "subject": "bees",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "nectar"
         }
     ],
@@ -4412,14 +4412,14 @@
     "triple_list_pred": [
         {
             "subject": "kinship systems",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Member-Collection(e2,e1)",
             "object": "grandparents"
         }
     ],
     "new": [
         {
             "subject": "kinship systems",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Member-Collection(e2,e1)",
             "object": "grandparents"
         }
     ],
@@ -4846,14 +4846,14 @@
     "triple_list_pred": [
         {
             "subject": "movement",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "redisco"
         }
     ],
     "new": [
         {
             "subject": "movement",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "redisco"
         }
     ],
@@ -5032,14 +5032,14 @@
     "triple_list_pred": [
         {
             "subject": "man",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "thump"
         }
     ],
     "new": [
         {
             "subject": "man",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "thump"
         }
     ],
@@ -5559,14 +5559,14 @@
     "triple_list_pred": [
         {
             "subject": "thief",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "screwdrive"
         }
     ],
     "new": [
         {
             "subject": "thief",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "screwdrive"
         }
     ],
@@ -5652,14 +5652,14 @@
     "triple_list_pred": [
         {
             "subject": "channel",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "soccer"
         }
     ],
     "new": [
         {
             "subject": "channel",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "soccer"
         }
     ],
@@ -5683,14 +5683,14 @@
     "triple_list_pred": [
         {
             "subject": "yarn",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bin"
         }
     ],
     "new": [
         {
             "subject": "yarn",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bin"
         }
     ],
@@ -5807,14 +5807,14 @@
     "triple_list_pred": [
         {
             "subject": "monk",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "author"
         }
     ],
     "new": [
         {
             "subject": "monk",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "author"
         }
     ],
@@ -6334,14 +6334,14 @@
     "triple_list_pred": [
         {
             "subject": "statement",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "group"
         }
     ],
     "new": [
         {
             "subject": "statement",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "group"
         }
     ],
@@ -6396,14 +6396,14 @@
     "triple_list_pred": [
         {
             "subject": "swarm",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "robots"
         }
     ],
     "new": [
         {
             "subject": "swarm",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "robots"
         }
     ],
@@ -6427,14 +6427,14 @@
     "triple_list_pred": [
         {
             "subject": "lawyer",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "team"
         }
     ],
     "new": [
         {
             "subject": "lawyer",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "team"
         }
     ],
@@ -6458,14 +6458,14 @@
     "triple_list_pred": [
         {
             "subject": "pictures",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "box"
         }
     ],
     "new": [
         {
             "subject": "pictures",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "box"
         }
     ],
@@ -6489,14 +6489,14 @@
     "triple_list_pred": [
         {
             "subject": "metro",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "station"
         }
     ],
     "new": [
         {
             "subject": "metro",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "station"
         }
     ],
@@ -6706,14 +6706,14 @@
     "triple_list_pred": [
         {
             "subject": "agar",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "polyethylene "
         }
     ],
     "new": [
         {
             "subject": "agar",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "polyethylene "
         }
     ],
@@ -6830,14 +6830,14 @@
     "triple_list_pred": [
         {
             "subject": "actions",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "interview"
         }
     ],
     "new": [
         {
             "subject": "actions",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "interview"
         }
     ],
@@ -7388,14 +7388,14 @@
     "triple_list_pred": [
         {
             "subject": "batteries",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "flashlight"
         }
     ],
     "new": [
         {
             "subject": "batteries",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "flashlight"
         }
     ],
@@ -7450,14 +7450,14 @@
     "triple_list_pred": [
         {
             "subject": "processes",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "acids"
         }
     ],
     "new": [
         {
             "subject": "processes",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "acids"
         }
     ],
@@ -7853,14 +7853,14 @@
     "triple_list_pred": [
         {
             "subject": "chain",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "saw"
         }
     ],
     "new": [
         {
             "subject": "chain",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "saw"
         }
     ],
@@ -8194,14 +8194,14 @@
     "triple_list_pred": [
         {
             "subject": "hatch",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "may"
         }
     ],
     "new": [
         {
             "subject": "hatch",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "may"
         }
     ],
@@ -8349,14 +8349,14 @@
     "triple_list_pred": [
         {
             "subject": "factory",
-            "relation": "Other",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "waste"
         }
     ],
     "new": [
         {
             "subject": "factory",
-            "relation": "Other",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "waste"
         }
     ],
@@ -8566,14 +8566,14 @@
     "triple_list_pred": [
         {
             "subject": "pile",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "ashes"
         }
     ],
     "new": [
         {
             "subject": "pile",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "ashes"
         }
     ],
@@ -8628,14 +8628,14 @@
     "triple_list_pred": [
         {
             "subject": "company",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "proposals"
         }
     ],
     "new": [
         {
             "subject": "company",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "proposals"
         }
     ],
@@ -9217,14 +9217,14 @@
     "triple_list_pred": [
         {
             "subject": "baby",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "cupboard "
         }
     ],
     "new": [
         {
             "subject": "baby",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "cupboard "
         }
     ],
@@ -9248,14 +9248,14 @@
     "triple_list_pred": [
         {
             "subject": "bagful",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "lies"
         }
     ],
     "new": [
         {
             "subject": "bagful",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "lies"
         }
     ],
@@ -9465,14 +9465,14 @@
     "triple_list_pred": [
         {
             "subject": "Time travel",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "science "
         }
     ],
     "new": [
         {
             "subject": "Time travel",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "science "
         }
     ],
@@ -9589,14 +9589,14 @@
     "triple_list_pred": [
         {
             "subject": "plant",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "oxida"
         }
     ],
     "new": [
         {
             "subject": "plant",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "oxida"
         }
     ],
@@ -9682,14 +9682,14 @@
     "triple_list_pred": [
         {
             "subject": "team",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "nanopartic"
         }
     ],
     "new": [
         {
             "subject": "team",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "nanopartic"
         }
     ],
@@ -9775,14 +9775,14 @@
     "triple_list_pred": [
         {
             "subject": "nose",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "tissue"
         }
     ],
     "new": [
         {
             "subject": "nose",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "tissue"
         }
     ],
@@ -9899,14 +9899,14 @@
     "triple_list_pred": [
         {
             "subject": "battalion",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "cavalry"
         }
     ],
     "new": [
         {
             "subject": "battalion",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "cavalry"
         }
     ],
@@ -9992,14 +9992,14 @@
     "triple_list_pred": [
         {
             "subject": "string",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "pearls"
         }
     ],
     "new": [
         {
             "subject": "string",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "pearls"
         }
     ],
@@ -10116,14 +10116,14 @@
     "triple_list_pred": [
         {
             "subject": "officer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ram"
         }
     ],
     "new": [
         {
             "subject": "officer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ram"
         }
     ],
@@ -10240,14 +10240,14 @@
     "triple_list_pred": [
         {
             "subject": "orchard",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "plum"
         }
     ],
     "new": [
         {
             "subject": "orchard",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "plum"
         }
     ],
@@ -10519,14 +10519,14 @@
     "triple_list_pred": [
         {
             "subject": "raisin",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "factory"
         }
     ],
     "new": [
         {
             "subject": "raisin",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "factory"
         }
     ],
@@ -10736,14 +10736,14 @@
     "triple_list_pred": [
         {
             "subject": "huddle",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "ideas"
         }
     ],
     "new": [
         {
             "subject": "huddle",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "ideas"
         }
     ],
@@ -11046,14 +11046,14 @@
     "triple_list_pred": [
         {
             "subject": "caterpillars",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "disease"
         }
     ],
     "new": [
         {
             "subject": "caterpillars",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "disease"
         }
     ],
@@ -11077,14 +11077,14 @@
     "triple_list_pred": [
         {
             "subject": "information",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "files"
         }
     ],
     "new": [
         {
             "subject": "information",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "files"
         }
     ],
@@ -11170,14 +11170,14 @@
     "triple_list_pred": [
         {
             "subject": "compeers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "profession"
         }
     ],
     "new": [
         {
             "subject": "compeers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "profession"
         }
     ],
@@ -11511,14 +11511,14 @@
     "triple_list_pred": [
         {
             "subject": "striker",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "keeper"
         }
     ],
     "new": [
         {
             "subject": "striker",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "keeper"
         }
     ],
@@ -11728,14 +11728,14 @@
     "triple_list_pred": [
         {
             "subject": "county",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "mail"
         }
     ],
     "new": [
         {
             "subject": "county",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "mail"
         }
     ],
@@ -11883,14 +11883,14 @@
     "triple_list_pred": [
         {
             "subject": "clay",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "membrane tub"
         }
     ],
     "new": [
         {
             "subject": "clay",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "membrane tub"
         }
     ],
@@ -11945,14 +11945,14 @@
     "triple_list_pred": [
         {
             "subject": "level",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "chapter"
         }
     ],
     "new": [
         {
             "subject": "level",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "chapter"
         }
     ],
@@ -12224,14 +12224,14 @@
     "triple_list_pred": [
         {
             "subject": "goalkeeper",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "team"
         }
     ],
     "new": [
         {
             "subject": "goalkeeper",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "team"
         }
     ],
@@ -12534,14 +12534,14 @@
     "triple_list_pred": [
         {
             "subject": "coin",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "operator"
         }
     ],
     "new": [
         {
             "subject": "coin",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "operator"
         }
     ],
@@ -12565,14 +12565,14 @@
     "triple_list_pred": [
         {
             "subject": "puppet",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "records"
         }
     ],
     "new": [
         {
             "subject": "puppet",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "records"
         }
     ],
@@ -12627,14 +12627,14 @@
     "triple_list_pred": [
         {
             "subject": "cleats",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "boat"
         }
     ],
     "new": [
         {
             "subject": "cleats",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "boat"
         }
     ],
@@ -13216,14 +13216,14 @@
     "triple_list_pred": [
         {
             "subject": "solvent",
-            "relation": "Cause-Effect(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "fl"
         }
     ],
     "new": [
         {
             "subject": "solvent",
-            "relation": "Cause-Effect(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "fl"
         }
     ],
@@ -13433,14 +13433,14 @@
     "triple_list_pred": [
         {
             "subject": "varieties",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "peasants"
         }
     ],
     "new": [
         {
             "subject": "varieties",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "peasants"
         }
     ],
@@ -13526,14 +13526,14 @@
     "triple_list_pred": [
         {
             "subject": "currency",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "bucket"
         }
     ],
     "new": [
         {
             "subject": "currency",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "bucket"
         }
     ],
@@ -13805,14 +13805,14 @@
     "triple_list_pred": [
         {
             "subject": "system",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "power"
         }
     ],
     "new": [
         {
             "subject": "system",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "power"
         }
     ],
@@ -13898,14 +13898,14 @@
     "triple_list_pred": [
         {
             "subject": "papaya",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nectar"
         }
     ],
     "new": [
         {
             "subject": "papaya",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nectar"
         }
     ],
@@ -14239,14 +14239,14 @@
     "triple_list_pred": [
         {
             "subject": "bureau",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "committee"
         }
     ],
     "new": [
         {
             "subject": "bureau",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "committee"
         }
     ],
@@ -14270,14 +14270,14 @@
     "triple_list_pred": [
         {
             "subject": "Water",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cis"
         }
     ],
     "new": [
         {
             "subject": "Water",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cis"
         }
     ],
@@ -14518,14 +14518,14 @@
     "triple_list_pred": [
         {
             "subject": "cartoon strip",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "comic "
         }
     ],
     "new": [
         {
             "subject": "cartoon strip",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "comic "
         }
     ],
@@ -15324,14 +15324,14 @@
     "triple_list_pred": [
         {
             "subject": "bottle",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "attract"
         }
     ],
     "new": [
         {
             "subject": "bottle",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "attract"
         }
     ],
@@ -15355,14 +15355,14 @@
     "triple_list_pred": [
         {
             "subject": "certificate",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "product"
         }
     ],
     "new": [
         {
             "subject": "certificate",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "product"
         }
     ],
@@ -15448,14 +15448,14 @@
     "triple_list_pred": [
         {
             "subject": "boat",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "harbour"
         }
     ],
     "new": [
         {
             "subject": "boat",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "harbour"
         }
     ],
@@ -15851,14 +15851,14 @@
     "triple_list_pred": [
         {
             "subject": "reinstatement",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "remedy"
         }
     ],
     "new": [
         {
             "subject": "reinstatement",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "remedy"
         }
     ],
@@ -15944,14 +15944,14 @@
     "triple_list_pred": [
         {
             "subject": "hikers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "shelters"
         }
     ],
     "new": [
         {
             "subject": "hikers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "shelters"
         }
     ],
@@ -16254,14 +16254,14 @@
     "triple_list_pred": [
         {
             "subject": "Noise regulations",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "force"
         }
     ],
     "new": [
         {
             "subject": "Noise regulations",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "force"
         }
     ],
@@ -16347,14 +16347,14 @@
     "triple_list_pred": [
         {
             "subject": "smile",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "hope"
         }
     ],
     "new": [
         {
             "subject": "smile",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "hope"
         }
     ],
@@ -16378,14 +16378,14 @@
     "triple_list_pred": [
         {
             "subject": "drinking",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "regulations"
         }
     ],
     "new": [
         {
             "subject": "drinking",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "regulations"
         }
     ],
@@ -16409,14 +16409,14 @@
     "triple_list_pred": [
         {
             "subject": "missile",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "can"
         }
     ],
     "new": [
         {
             "subject": "missile",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "can"
         }
     ],
@@ -16595,14 +16595,14 @@
     "triple_list_pred": [
         {
             "subject": "floors",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cottage"
         }
     ],
     "new": [
         {
             "subject": "floors",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cottage"
         }
     ],
@@ -16657,14 +16657,14 @@
     "triple_list_pred": [
         {
             "subject": "goat",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "herd"
         }
     ],
     "new": [
         {
             "subject": "goat",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "herd"
         }
     ],
@@ -16874,14 +16874,14 @@
     "triple_list_pred": [
         {
             "subject": "report",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "requirements"
         }
     ],
     "new": [
         {
             "subject": "report",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "requirements"
         }
     ],
@@ -17494,14 +17494,14 @@
     "triple_list_pred": [
         {
             "subject": "section",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "findings"
         }
     ],
     "new": [
         {
             "subject": "section",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "findings"
         }
     ],
@@ -17711,14 +17711,14 @@
     "triple_list_pred": [
         {
             "subject": "riffraff",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "liar"
         }
     ],
     "new": [
         {
             "subject": "riffraff",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "liar"
         }
     ],
@@ -17928,14 +17928,14 @@
     "triple_list_pred": [
         {
             "subject": "kitchen",
-            "relation": "Content-Container(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "drug paraphernal"
         }
     ],
     "new": [
         {
             "subject": "kitchen",
-            "relation": "Content-Container(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "drug paraphernal"
         }
     ],
@@ -17959,14 +17959,14 @@
     "triple_list_pred": [
         {
             "subject": "accomplice",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "hang"
         }
     ],
     "new": [
         {
             "subject": "accomplice",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "hang"
         }
     ],
@@ -18021,14 +18021,14 @@
     "triple_list_pred": [
         {
             "subject": "liberties",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "laws"
         }
     ],
     "new": [
         {
             "subject": "liberties",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "laws"
         }
     ],
@@ -18455,14 +18455,14 @@
     "triple_list_pred": [
         {
             "subject": "payment",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "email "
         }
     ],
     "new": [
         {
             "subject": "payment",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "email "
         }
     ],
@@ -18734,14 +18734,14 @@
     "triple_list_pred": [
         {
             "subject": "beam",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "valve"
         }
     ],
     "new": [
         {
             "subject": "beam",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "valve"
         }
     ],
@@ -18920,14 +18920,14 @@
     "triple_list_pred": [
         {
             "subject": "procession",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bas-relie"
         }
     ],
     "new": [
         {
             "subject": "procession",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bas-relie"
         }
     ],
@@ -19354,14 +19354,14 @@
     "triple_list_pred": [
         {
             "subject": "products",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "overseas"
         }
     ],
     "new": [
         {
             "subject": "products",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "overseas"
         }
     ],
@@ -19385,14 +19385,14 @@
     "triple_list_pred": [
         {
             "subject": "guest",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Other",
             "object": "mall"
         }
     ],
     "new": [
         {
             "subject": "guest",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Other",
             "object": "mall"
         }
     ],
@@ -19540,14 +19540,14 @@
     "triple_list_pred": [
         {
             "subject": "billions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nanotech"
         }
     ],
     "new": [
         {
             "subject": "billions",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nanotech"
         }
     ],
@@ -19571,14 +19571,14 @@
     "triple_list_pred": [
         {
             "subject": "law",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "force"
         }
     ],
     "new": [
         {
             "subject": "law",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "force"
         }
     ],
@@ -19788,14 +19788,14 @@
     "triple_list_pred": [
         {
             "subject": "editor cum scientist",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "rev"
         }
     ],
     "new": [
         {
             "subject": "editor cum scientist",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "rev"
         }
     ],
@@ -19850,14 +19850,14 @@
     "triple_list_pred": [
         {
             "subject": "text",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "material"
         }
     ],
     "new": [
         {
             "subject": "text",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "material"
         }
     ],
@@ -19881,14 +19881,14 @@
     "triple_list_pred": [
         {
             "subject": "electrodes",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "brain"
         }
     ],
     "new": [
         {
             "subject": "electrodes",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "brain"
         }
     ],
@@ -20563,14 +20563,14 @@
     "triple_list_pred": [
         {
             "subject": "document",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Member-Collection(e1,e2)",
             "object": "series"
         }
     ],
     "new": [
         {
             "subject": "document",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Member-Collection(e1,e2)",
             "object": "series"
         }
     ],
@@ -20625,14 +20625,14 @@
     "triple_list_pred": [
         {
             "subject": "forebrain",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "amphi"
         }
     ],
     "new": [
         {
             "subject": "forebrain",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "amphi"
         }
     ],
@@ -20935,14 +20935,14 @@
     "triple_list_pred": [
         {
             "subject": "gunnel",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "boat"
         }
     ],
     "new": [
         {
             "subject": "gunnel",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "boat"
         }
     ],
@@ -21183,14 +21183,14 @@
     "triple_list_pred": [
         {
             "subject": "slopes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "vulcan"
         }
     ],
     "new": [
         {
             "subject": "slopes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "vulcan"
         }
     ],
@@ -21772,14 +21772,14 @@
     "triple_list_pred": [
         {
             "subject": "probe",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fragment"
         }
     ],
     "new": [
         {
             "subject": "probe",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fragment"
         }
     ],
@@ -21803,14 +21803,14 @@
     "triple_list_pred": [
         {
             "subject": "poem",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "author"
         }
     ],
     "new": [
         {
             "subject": "poem",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "author"
         }
     ],
@@ -21896,14 +21896,14 @@
     "triple_list_pred": [
         {
             "subject": "oil painting",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "frame"
         }
     ],
     "new": [
         {
             "subject": "oil painting",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "frame"
         }
     ],
@@ -22206,14 +22206,14 @@
     "triple_list_pred": [
         {
             "subject": "fuselage",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "tank"
         }
     ],
     "new": [
         {
             "subject": "fuselage",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "tank"
         }
     ],
@@ -22268,14 +22268,14 @@
     "triple_list_pred": [
         {
             "subject": "entertainer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "pick"
         }
     ],
     "new": [
         {
             "subject": "entertainer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "pick"
         }
     ],
@@ -22578,14 +22578,14 @@
     "triple_list_pred": [
         {
             "subject": "products",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "document"
         }
     ],
     "new": [
         {
             "subject": "products",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "document"
         }
     ],
@@ -22795,14 +22795,14 @@
     "triple_list_pred": [
         {
             "subject": "fistful",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "coup"
         }
     ],
     "new": [
         {
             "subject": "fistful",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "coup"
         }
     ],
@@ -22888,14 +22888,14 @@
     "triple_list_pred": [
         {
             "subject": "country",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "lodge"
         }
     ],
     "new": [
         {
             "subject": "country",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "lodge"
         }
     ],
@@ -22981,14 +22981,14 @@
     "triple_list_pred": [
         {
             "subject": "dirt",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "can"
         }
     ],
     "new": [
         {
             "subject": "dirt",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "can"
         }
     ],
@@ -23353,14 +23353,14 @@
     "triple_list_pred": [
         {
             "subject": "guy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "fight"
         }
     ],
     "new": [
         {
             "subject": "guy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "fight"
         }
     ],
@@ -23415,14 +23415,14 @@
     "triple_list_pred": [
         {
             "subject": "war",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "devol"
         }
     ],
     "new": [
         {
             "subject": "war",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "devol"
         }
     ],
@@ -23694,14 +23694,14 @@
     "triple_list_pred": [
         {
             "subject": "group",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "refrigerator"
         }
     ],
     "new": [
         {
             "subject": "group",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "refrigerator"
         }
     ],
@@ -23911,14 +23911,14 @@
     "triple_list_pred": [
         {
             "subject": "kitchen",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "desk"
         }
     ],
     "new": [
         {
             "subject": "kitchen",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "desk"
         }
     ],
@@ -23973,14 +23973,14 @@
     "triple_list_pred": [
         {
             "subject": "cover",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Other",
             "object": "e"
         }
     ],
     "new": [
         {
             "subject": "cover",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Other",
             "object": "e"
         }
     ],
@@ -24159,14 +24159,14 @@
     "triple_list_pred": [
         {
             "subject": "decision",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "maker"
         }
     ],
     "new": [
         {
             "subject": "decision",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "maker"
         }
     ],
@@ -24469,14 +24469,14 @@
     "triple_list_pred": [
         {
             "subject": "blockage",
-            "relation": "Entity-Origin(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cl"
         }
     ],
     "new": [
         {
             "subject": "blockage",
-            "relation": "Entity-Origin(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cl"
         }
     ],
@@ -25492,14 +25492,14 @@
     "triple_list_pred": [
         {
             "subject": "aspects",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "signals"
         }
     ],
     "new": [
         {
             "subject": "aspects",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "signals"
         }
     ],
@@ -25740,14 +25740,14 @@
     "triple_list_pred": [
         {
             "subject": "Billions",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "companies"
         }
     ],
     "new": [
         {
             "subject": "Billions",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "companies"
         }
     ],
@@ -25864,14 +25864,14 @@
     "triple_list_pred": [
         {
             "subject": "license",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "purse"
         }
     ],
     "new": [
         {
             "subject": "license",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "purse"
         }
     ],
@@ -26236,14 +26236,14 @@
     "triple_list_pred": [
         {
             "subject": "talent",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "television"
         }
     ],
     "new": [
         {
             "subject": "talent",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "television"
         }
     ],
@@ -26267,14 +26267,14 @@
     "triple_list_pred": [
         {
             "subject": "book",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "cover"
         }
     ],
     "new": [
         {
             "subject": "book",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "cover"
         }
     ],
@@ -27011,14 +27011,14 @@
     "triple_list_pred": [
         {
             "subject": "mechanism",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "patel"
         }
     ],
     "new": [
         {
             "subject": "mechanism",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "patel"
         }
     ],
@@ -27476,14 +27476,14 @@
     "triple_list_pred": [
         {
             "subject": "factories",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "developing "
         }
     ],
     "new": [
         {
             "subject": "factories",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "developing "
         }
     ],
@@ -27600,14 +27600,14 @@
     "triple_list_pred": [
         {
             "subject": "results",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "journals"
         }
     ],
     "new": [
         {
             "subject": "results",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "journals"
         }
     ],
@@ -27755,14 +27755,14 @@
     "triple_list_pred": [
         {
             "subject": "workers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "product"
         }
     ],
     "new": [
         {
             "subject": "workers",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "product"
         }
     ],
@@ -28561,14 +28561,14 @@
     "triple_list_pred": [
         {
             "subject": "words",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "action"
         }
     ],
     "new": [
         {
             "subject": "words",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "action"
         }
     ],
@@ -28716,14 +28716,14 @@
     "triple_list_pred": [
         {
             "subject": "candies",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "child"
         }
     ],
     "new": [
         {
             "subject": "candies",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "child"
         }
     ],
@@ -28995,14 +28995,14 @@
     "triple_list_pred": [
         {
             "subject": "emails",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "broadcasting"
         }
     ],
     "new": [
         {
             "subject": "emails",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "broadcasting"
         }
     ],
@@ -29336,14 +29336,14 @@
     "triple_list_pred": [
         {
             "subject": "glut",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "savings"
         }
     ],
     "new": [
         {
             "subject": "glut",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "savings"
         }
     ],
@@ -29863,14 +29863,14 @@
     "triple_list_pred": [
         {
             "subject": "area",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Other",
             "object": "cortex"
         }
     ],
     "new": [
         {
             "subject": "area",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Other",
             "object": "cortex"
         }
     ],
@@ -30018,14 +30018,14 @@
     "triple_list_pred": [
         {
             "subject": "arm",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cross"
         }
     ],
     "new": [
         {
             "subject": "arm",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cross"
         }
     ],
@@ -30049,14 +30049,14 @@
     "triple_list_pred": [
         {
             "subject": "Negotiations",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "protocol"
         }
     ],
     "new": [
         {
             "subject": "Negotiations",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "protocol"
         }
     ],
@@ -30297,14 +30297,14 @@
     "triple_list_pred": [
         {
             "subject": "output",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "body"
         }
     ],
     "new": [
         {
             "subject": "output",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "body"
         }
     ],
@@ -30545,14 +30545,14 @@
     "triple_list_pred": [
         {
             "subject": "Cocaine",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "pineapple"
         }
     ],
     "new": [
         {
             "subject": "Cocaine",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "pineapple"
         }
     ],
@@ -30793,14 +30793,14 @@
     "triple_list_pred": [
         {
             "subject": "arrows",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "students"
         }
     ],
     "new": [
         {
             "subject": "arrows",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "students"
         }
     ],
@@ -31258,14 +31258,14 @@
     "triple_list_pred": [
         {
             "subject": "Positions",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "black "
         }
     ],
     "new": [
         {
             "subject": "Positions",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "black "
         }
     ],
@@ -31289,14 +31289,14 @@
     "triple_list_pred": [
         {
             "subject": "fishes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "purposes"
         }
     ],
     "new": [
         {
             "subject": "fishes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "purposes"
         }
     ],
@@ -31382,14 +31382,14 @@
     "triple_list_pred": [
         {
             "subject": "midwife",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Other",
             "object": "birth"
         }
     ],
     "new": [
         {
             "subject": "midwife",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Other",
             "object": "birth"
         }
     ],
@@ -31599,14 +31599,14 @@
     "triple_list_pred": [
         {
             "subject": "puppy",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "garbage "
         }
     ],
     "new": [
         {
             "subject": "puppy",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "garbage "
         }
     ],
@@ -31816,14 +31816,14 @@
     "triple_list_pred": [
         {
             "subject": "photon",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cloud"
         }
     ],
     "new": [
         {
             "subject": "photon",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cloud"
         }
     ],
@@ -31971,14 +31971,14 @@
     "triple_list_pred": [
         {
             "subject": "kit",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "saw"
         }
     ],
     "new": [
         {
             "subject": "kit",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "saw"
         }
     ],
@@ -32622,14 +32622,14 @@
     "triple_list_pred": [
         {
             "subject": "heel",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "infants"
         }
     ],
     "new": [
         {
             "subject": "heel",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "infants"
         }
     ],
@@ -32746,14 +32746,14 @@
     "triple_list_pred": [
         {
             "subject": "clergy",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "faith"
         }
     ],
     "new": [
         {
             "subject": "clergy",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "faith"
         }
     ],
@@ -33025,14 +33025,14 @@
     "triple_list_pred": [
         {
             "subject": "dish",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "herring"
         }
     ],
     "new": [
         {
             "subject": "dish",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "herring"
         }
     ],
@@ -33087,14 +33087,14 @@
     "triple_list_pred": [
         {
             "subject": "subject",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "discussion"
         }
     ],
     "new": [
         {
             "subject": "subject",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "discussion"
         }
     ],
@@ -33304,14 +33304,14 @@
     "triple_list_pred": [
         {
             "subject": "forum",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "eighteenth "
         }
     ],
     "new": [
         {
             "subject": "forum",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "eighteenth "
         }
     ],
@@ -33490,14 +33490,14 @@
     "triple_list_pred": [
         {
             "subject": "skin",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "cara"
         }
     ],
     "new": [
         {
             "subject": "skin",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "cara"
         }
     ],
@@ -33707,14 +33707,14 @@
     "triple_list_pred": [
         {
             "subject": "plate",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Other",
             "object": "electro"
         }
     ],
     "new": [
         {
             "subject": "plate",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Other",
             "object": "electro"
         }
     ],
@@ -33738,14 +33738,14 @@
     "triple_list_pred": [
         {
             "subject": "anecdotes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "workers"
         }
     ],
     "new": [
         {
             "subject": "anecdotes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "workers"
         }
     ],
@@ -34203,14 +34203,14 @@
     "triple_list_pred": [
         {
             "subject": "website",
-            "relation": "Message-Topic(e1,e2)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "projects"
         }
     ],
     "new": [
         {
             "subject": "website",
-            "relation": "Message-Topic(e1,e2)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "projects"
         }
     ],
@@ -34668,14 +34668,14 @@
     "triple_list_pred": [
         {
             "subject": "experimenter",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "peeph"
         }
     ],
     "new": [
         {
             "subject": "experimenter",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "peeph"
         }
     ],
@@ -34916,14 +34916,14 @@
     "triple_list_pred": [
         {
             "subject": "leather",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "craftsman"
         }
     ],
     "new": [
         {
             "subject": "leather",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Product-Producer(e1,e2)",
             "object": "craftsman"
         }
     ],
@@ -34947,14 +34947,14 @@
     "triple_list_pred": [
         {
             "subject": "paper",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "model"
         }
     ],
     "new": [
         {
             "subject": "paper",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "model"
         }
     ],
@@ -35040,14 +35040,14 @@
     "triple_list_pred": [
         {
             "subject": "cash",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bag"
         }
     ],
     "new": [
         {
             "subject": "cash",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bag"
         }
     ],
@@ -35102,14 +35102,14 @@
     "triple_list_pred": [
         {
             "subject": "rest",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "savings"
         }
     ],
     "new": [
         {
             "subject": "rest",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "savings"
         }
     ],
@@ -35691,14 +35691,14 @@
     "triple_list_pred": [
         {
             "subject": "floor",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bus"
         }
     ],
     "new": [
         {
             "subject": "floor",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bus"
         }
     ],
@@ -35908,14 +35908,14 @@
     "triple_list_pred": [
         {
             "subject": "psychiatrists",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "medications"
         }
     ],
     "new": [
         {
             "subject": "psychiatrists",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "medications"
         }
     ],
@@ -36125,14 +36125,14 @@
     "triple_list_pred": [
         {
             "subject": "knobs",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "slots"
         }
     ],
     "new": [
         {
             "subject": "knobs",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "slots"
         }
     ],
@@ -36280,14 +36280,14 @@
     "triple_list_pred": [
         {
             "subject": "reflux",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "mouth"
         }
     ],
     "new": [
         {
             "subject": "reflux",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "mouth"
         }
     ],
@@ -36435,14 +36435,14 @@
     "triple_list_pred": [
         {
             "subject": "rule",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "sentences"
         }
     ],
     "new": [
         {
             "subject": "rule",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "sentences"
         }
     ],
@@ -36683,14 +36683,14 @@
     "triple_list_pred": [
         {
             "subject": "body",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mat"
         }
     ],
     "new": [
         {
             "subject": "body",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mat"
         }
     ],
@@ -36838,14 +36838,14 @@
     "triple_list_pred": [
         {
             "subject": "fun run",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "noon"
         }
     ],
     "new": [
         {
             "subject": "fun run",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "noon"
         }
     ],
@@ -36869,14 +36869,14 @@
     "triple_list_pred": [
         {
             "subject": "commentator",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "obsc"
         }
     ],
     "new": [
         {
             "subject": "commentator",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "obsc"
         }
     ],
@@ -36900,14 +36900,14 @@
     "triple_list_pred": [
         {
             "subject": "light switch",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "cover"
         }
     ],
     "new": [
         {
             "subject": "light switch",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "cover"
         }
     ],
@@ -37148,14 +37148,14 @@
     "triple_list_pred": [
         {
             "subject": "arguments",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "practice"
         }
     ],
     "new": [
         {
             "subject": "arguments",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "practice"
         }
     ],
@@ -37303,14 +37303,14 @@
     "triple_list_pred": [
         {
             "subject": "ring",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bind"
         }
     ],
     "new": [
         {
             "subject": "ring",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "bind"
         }
     ],
@@ -37644,14 +37644,14 @@
     "triple_list_pred": [
         {
             "subject": "pole",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "recept"
         }
     ],
     "new": [
         {
             "subject": "pole",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "recept"
         }
     ],
@@ -37737,14 +37737,14 @@
     "triple_list_pred": [
         {
             "subject": "windshield",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Content-Container(e1,e2)",
             "object": "housing"
         }
     ],
     "new": [
         {
             "subject": "windshield",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Content-Container(e1,e2)",
             "object": "housing"
         }
     ],
@@ -37768,14 +37768,14 @@
     "triple_list_pred": [
         {
             "subject": "farmers",
-            "relation": "Other",
+            "relation": "Product-Producer(e1,e2)",
             "object": "pl"
         }
     ],
     "new": [
         {
             "subject": "farmers",
-            "relation": "Other",
+            "relation": "Product-Producer(e1,e2)",
             "object": "pl"
         }
     ],
@@ -37830,14 +37830,14 @@
     "triple_list_pred": [
         {
             "subject": "stations",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "shows"
         }
     ],
     "new": [
         {
             "subject": "stations",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "shows"
         }
     ],
@@ -38171,14 +38171,14 @@
     "triple_list_pred": [
         {
             "subject": "tech",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "Inte"
         }
     ],
     "new": [
         {
             "subject": "tech",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "Inte"
         }
     ],
@@ -38450,14 +38450,14 @@
     "triple_list_pred": [
         {
             "subject": "results",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "investigations"
         }
     ],
     "new": [
         {
             "subject": "results",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "investigations"
         }
     ],
@@ -38698,14 +38698,14 @@
     "triple_list_pred": [
         {
             "subject": "fistful",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dollars"
         }
     ],
     "new": [
         {
             "subject": "fistful",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dollars"
         }
     ],
@@ -38884,14 +38884,14 @@
     "triple_list_pred": [
         {
             "subject": "Stroke",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "death"
         }
     ],
     "new": [
         {
             "subject": "Stroke",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "death"
         }
     ],
@@ -39411,14 +39411,14 @@
     "triple_list_pred": [
         {
             "subject": "ship",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fleet"
         }
     ],
     "new": [
         {
             "subject": "ship",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fleet"
         }
     ],
@@ -39597,14 +39597,14 @@
     "triple_list_pred": [
         {
             "subject": "homepage sticker",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "homepage "
         }
     ],
     "new": [
         {
             "subject": "homepage sticker",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "homepage "
         }
     ],
@@ -39752,14 +39752,14 @@
     "triple_list_pred": [
         {
             "subject": "regulations",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "force"
         }
     ],
     "new": [
         {
             "subject": "regulations",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "force"
         }
     ],
@@ -39845,14 +39845,14 @@
     "triple_list_pred": [
         {
             "subject": "recipe",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "apples"
         }
     ],
     "new": [
         {
             "subject": "recipe",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "apples"
         }
     ],
@@ -39969,14 +39969,14 @@
     "triple_list_pred": [
         {
             "subject": "co-designer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "protocol"
         }
     ],
     "new": [
         {
             "subject": "co-designer",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "protocol"
         }
     ],
@@ -40248,14 +40248,14 @@
     "triple_list_pred": [
         {
             "subject": "applications",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "prize "
         }
     ],
     "new": [
         {
             "subject": "applications",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "prize "
         }
     ],
@@ -40403,14 +40403,14 @@
     "triple_list_pred": [
         {
             "subject": "chip",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Other",
             "object": "reliqua"
         }
     ],
     "new": [
         {
             "subject": "chip",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Other",
             "object": "reliqua"
         }
     ],
@@ -40496,14 +40496,14 @@
     "triple_list_pred": [
         {
             "subject": "kitchen",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "nuturing "
         }
     ],
     "new": [
         {
             "subject": "kitchen",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "nuturing "
         }
     ],
@@ -40682,14 +40682,14 @@
     "triple_list_pred": [
         {
             "subject": "old cars",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "residents "
         }
     ],
     "new": [
         {
             "subject": "old cars",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "residents "
         }
     ],
@@ -40992,14 +40992,14 @@
     "triple_list_pred": [
         {
             "subject": "skills",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "surgery"
         }
     ],
     "new": [
         {
             "subject": "skills",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "surgery"
         }
     ],
@@ -41116,14 +41116,14 @@
     "triple_list_pred": [
         {
             "subject": "spa",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "wax"
         }
     ],
     "new": [
         {
             "subject": "spa",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "wax"
         }
     ],
@@ -41364,14 +41364,14 @@
     "triple_list_pred": [
         {
             "subject": "Education",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "artistic "
         }
     ],
     "new": [
         {
             "subject": "Education",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "artistic "
         }
     ],
@@ -41395,14 +41395,14 @@
     "triple_list_pred": [
         {
             "subject": "reinsurance",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "company"
         }
     ],
     "new": [
         {
             "subject": "reinsurance",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "company"
         }
     ],
@@ -41426,14 +41426,14 @@
     "triple_list_pred": [
         {
             "subject": "fiddler",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "technique"
         }
     ],
     "new": [
         {
             "subject": "fiddler",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "technique"
         }
     ],
@@ -41519,14 +41519,14 @@
     "triple_list_pred": [
         {
             "subject": "Soy",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Other",
             "object": "oil"
         }
     ],
     "new": [
         {
             "subject": "Soy",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Other",
             "object": "oil"
         }
     ],
@@ -41643,14 +41643,14 @@
     "triple_list_pred": [
         {
             "subject": "ghost-ship",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fleet"
         }
     ],
     "new": [
         {
             "subject": "ghost-ship",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "fleet"
         }
     ],
@@ -41705,14 +41705,14 @@
     "triple_list_pred": [
         {
             "subject": "oranges",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "tank"
         }
     ],
     "new": [
         {
             "subject": "oranges",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "tank"
         }
     ],
@@ -41891,14 +41891,14 @@
     "triple_list_pred": [
         {
             "subject": "Potato",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "star"
         }
     ],
     "new": [
         {
             "subject": "Potato",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "star"
         }
     ],
@@ -41984,14 +41984,14 @@
     "triple_list_pred": [
         {
             "subject": "volume",
-            "relation": "Message-Topic(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "essays"
         }
     ],
     "new": [
         {
             "subject": "volume",
-            "relation": "Message-Topic(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "essays"
         }
     ],
@@ -42449,14 +42449,14 @@
     "triple_list_pred": [
         {
             "subject": "dashboard",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "speed"
         }
     ],
     "new": [
         {
             "subject": "dashboard",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "speed"
         }
     ],
@@ -42511,14 +42511,14 @@
     "triple_list_pred": [
         {
             "subject": "bees",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "honey"
         }
     ],
     "new": [
         {
             "subject": "bees",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "honey"
         }
     ],
@@ -42542,14 +42542,14 @@
     "triple_list_pred": [
         {
             "subject": "challenges",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "stand"
         }
     ],
     "new": [
         {
             "subject": "challenges",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "stand"
         }
     ],
@@ -42573,14 +42573,14 @@
     "triple_list_pred": [
         {
             "subject": "findings",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "interactions"
         }
     ],
     "new": [
         {
             "subject": "findings",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "interactions"
         }
     ],
@@ -42728,14 +42728,14 @@
     "triple_list_pred": [
         {
             "subject": "hill",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "corn"
         }
     ],
     "new": [
         {
             "subject": "hill",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "corn"
         }
     ],
@@ -42945,14 +42945,14 @@
     "triple_list_pred": [
         {
             "subject": "yoke",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ox"
         }
     ],
     "new": [
         {
             "subject": "yoke",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ox"
         }
     ],
@@ -43038,14 +43038,14 @@
     "triple_list_pred": [
         {
             "subject": "drugs",
-            "relation": "Other",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "disease"
         }
     ],
     "new": [
         {
             "subject": "drugs",
-            "relation": "Other",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "disease"
         }
     ],
@@ -43069,14 +43069,14 @@
     "triple_list_pred": [
         {
             "subject": "rule",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "legal "
         }
     ],
     "new": [
         {
             "subject": "rule",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "legal "
         }
     ],
@@ -43131,14 +43131,14 @@
     "triple_list_pred": [
         {
             "subject": "victim",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "screwdrive"
         }
     ],
     "new": [
         {
             "subject": "victim",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "screwdrive"
         }
     ],
@@ -43348,14 +43348,14 @@
     "triple_list_pred": [
         {
             "subject": "meeting",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "shareholders"
         }
     ],
     "new": [
         {
             "subject": "meeting",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Instrument-Agency(e1,e2)",
             "object": "shareholders"
         }
     ],
@@ -43472,14 +43472,14 @@
     "triple_list_pred": [
         {
             "subject": "mason",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "edges"
         }
     ],
     "new": [
         {
             "subject": "mason",
-            "relation": "Other",
+            "relation": "Product-Producer(e2,e1)",
             "object": "edges"
         }
     ],
@@ -43534,14 +43534,14 @@
     "triple_list_pred": [
         {
             "subject": "nectar",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "plants"
         }
     ],
     "new": [
         {
             "subject": "nectar",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "plants"
         }
     ],
@@ -43596,14 +43596,14 @@
     "triple_list_pred": [
         {
             "subject": "plague",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "insects"
         }
     ],
     "new": [
         {
             "subject": "plague",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "insects"
         }
     ],
@@ -43658,14 +43658,14 @@
     "triple_list_pred": [
         {
             "subject": "body",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "path"
         }
     ],
     "new": [
         {
             "subject": "body",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "path"
         }
     ],
@@ -43720,14 +43720,14 @@
     "triple_list_pred": [
         {
             "subject": "tube",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "furnace"
         }
     ],
     "new": [
         {
             "subject": "tube",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "furnace"
         }
     ],
@@ -43813,14 +43813,14 @@
     "triple_list_pred": [
         {
             "subject": "prices",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "hotel"
         }
     ],
     "new": [
         {
             "subject": "prices",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "hotel"
         }
     ],
@@ -43968,14 +43968,14 @@
     "triple_list_pred": [
         {
             "subject": "workman",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ho"
         }
     ],
     "new": [
         {
             "subject": "workman",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "ho"
         }
     ],
@@ -43999,14 +43999,14 @@
     "triple_list_pred": [
         {
             "subject": "paper",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "review"
         }
     ],
     "new": [
         {
             "subject": "paper",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "review"
         }
     ],
@@ -44185,14 +44185,14 @@
     "triple_list_pred": [
         {
             "subject": "radio",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "development"
         }
     ],
     "new": [
         {
             "subject": "radio",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "development"
         }
     ],
@@ -44216,14 +44216,14 @@
     "triple_list_pred": [
         {
             "subject": "system",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "modules"
         }
     ],
     "new": [
         {
             "subject": "system",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "modules"
         }
     ],
@@ -44464,14 +44464,14 @@
     "triple_list_pred": [
         {
             "subject": "report",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "prisoners"
         }
     ],
     "new": [
         {
             "subject": "report",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "prisoners"
         }
     ],
@@ -44650,14 +44650,14 @@
     "triple_list_pred": [
         {
             "subject": "Stereograph",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "output"
         }
     ],
     "new": [
         {
             "subject": "Stereograph",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "output"
         }
     ],
@@ -44805,14 +44805,14 @@
     "triple_list_pred": [
         {
             "subject": "students",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Other",
             "object": "violence"
         }
     ],
     "new": [
         {
             "subject": "students",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Other",
             "object": "violence"
         }
     ],
@@ -44960,14 +44960,14 @@
     "triple_list_pred": [
         {
             "subject": "trays",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "beak"
         }
     ],
     "new": [
         {
             "subject": "trays",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "beak"
         }
     ],
@@ -45208,14 +45208,14 @@
     "triple_list_pred": [
         {
             "subject": "author",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "note"
         }
     ],
     "new": [
         {
             "subject": "author",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "note"
         }
     ],
@@ -45332,14 +45332,14 @@
     "triple_list_pred": [
         {
             "subject": "campers",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Other",
             "object": "wilderness"
         }
     ],
     "new": [
         {
             "subject": "campers",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Other",
             "object": "wilderness"
         }
     ],
@@ -45363,14 +45363,14 @@
     "triple_list_pred": [
         {
             "subject": "findings",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "testing"
         }
     ],
     "new": [
         {
             "subject": "findings",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "testing"
         }
     ],
@@ -45518,14 +45518,14 @@
     "triple_list_pred": [
         {
             "subject": "wife",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "family"
         }
     ],
     "new": [
         {
             "subject": "wife",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "family"
         }
     ],
@@ -45828,14 +45828,14 @@
     "triple_list_pred": [
         {
             "subject": "stack",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "cart"
         }
     ],
     "new": [
         {
             "subject": "stack",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "cart"
         }
     ],
@@ -46045,14 +46045,14 @@
     "triple_list_pred": [
         {
             "subject": "list",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "safe"
         }
     ],
     "new": [
         {
             "subject": "list",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "safe"
         }
     ],
@@ -46386,14 +46386,14 @@
     "triple_list_pred": [
         {
             "subject": "friend",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cooke"
         }
     ],
     "new": [
         {
             "subject": "friend",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "cooke"
         }
     ],
@@ -46448,14 +46448,14 @@
     "triple_list_pred": [
         {
             "subject": "parent",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "report"
         }
     ],
     "new": [
         {
             "subject": "parent",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Product-Producer(e2,e1)",
             "object": "report"
         }
     ],
@@ -46975,14 +46975,14 @@
     "triple_list_pred": [
         {
             "subject": "houses",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "way"
         }
     ],
     "new": [
         {
             "subject": "houses",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "way"
         }
     ],
@@ -47285,14 +47285,14 @@
     "triple_list_pred": [
         {
             "subject": "Physical geography",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "natural "
         }
     ],
     "new": [
         {
             "subject": "Physical geography",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "natural "
         }
     ],
@@ -47595,14 +47595,14 @@
     "triple_list_pred": [
         {
             "subject": "fire",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "southeastern "
         }
     ],
     "new": [
         {
             "subject": "fire",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "southeastern "
         }
     ],
@@ -48339,14 +48339,14 @@
     "triple_list_pred": [
         {
             "subject": "flood",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "del"
         }
     ],
     "new": [
         {
             "subject": "flood",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "del"
         }
     ],
@@ -48835,14 +48835,14 @@
     "triple_list_pred": [
         {
             "subject": "impact",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "lines"
         }
     ],
     "new": [
         {
             "subject": "impact",
-            "relation": "Other",
+            "relation": "Message-Topic(e2,e1)",
             "object": "lines"
         }
     ],
@@ -48866,14 +48866,14 @@
     "triple_list_pred": [
         {
             "subject": "flask",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "powder"
         }
     ],
     "new": [
         {
             "subject": "flask",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "powder"
         }
     ],
@@ -49424,14 +49424,14 @@
     "triple_list_pred": [
         {
             "subject": "Cancellations",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "mail"
         }
     ],
     "new": [
         {
             "subject": "Cancellations",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "mail"
         }
     ],
@@ -49858,14 +49858,14 @@
     "triple_list_pred": [
         {
             "subject": "pile",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "excre"
         }
     ],
     "new": [
         {
             "subject": "pile",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "excre"
         }
     ],
@@ -50013,14 +50013,14 @@
     "triple_list_pred": [
         {
             "subject": "fish",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "sho"
         }
     ],
     "new": [
         {
             "subject": "fish",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "sho"
         }
     ],
@@ -50106,14 +50106,14 @@
     "triple_list_pred": [
         {
             "subject": "book",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Member-Collection(e2,e1)",
             "object": "titles"
         }
     ],
     "new": [
         {
             "subject": "book",
-            "relation": "Product-Producer(e1,e2)",
+            "relation": "Member-Collection(e2,e1)",
             "object": "titles"
         }
     ],
@@ -50323,14 +50323,14 @@
     "triple_list_pred": [
         {
             "subject": "echocardiography system",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Other",
             "object": "clinical card"
         }
     ],
     "new": [
         {
             "subject": "echocardiography system",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Other",
             "object": "clinical card"
         }
     ],
@@ -50633,14 +50633,14 @@
     "triple_list_pred": [
         {
             "subject": "power",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "grid"
         }
     ],
     "new": [
         {
             "subject": "power",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "grid"
         }
     ],
@@ -50726,14 +50726,14 @@
     "triple_list_pred": [
         {
             "subject": "circle",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "fall"
         }
     ],
     "new": [
         {
             "subject": "circle",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "fall"
         }
     ],
@@ -51005,14 +51005,14 @@
     "triple_list_pred": [
         {
             "subject": "process",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "field "
         }
     ],
     "new": [
         {
             "subject": "process",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "field "
         }
     ],
@@ -51067,14 +51067,14 @@
     "triple_list_pred": [
         {
             "subject": "team",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "game"
         }
     ],
     "new": [
         {
             "subject": "team",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "game"
         }
     ],
@@ -51222,14 +51222,14 @@
     "triple_list_pred": [
         {
             "subject": "items",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "home"
         }
     ],
     "new": [
         {
             "subject": "items",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "home"
         }
     ],
@@ -51439,14 +51439,14 @@
     "triple_list_pred": [
         {
             "subject": "present",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "past"
         }
     ],
     "new": [
         {
             "subject": "present",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "past"
         }
     ],
@@ -51749,14 +51749,14 @@
     "triple_list_pred": [
         {
             "subject": "protein",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "pancre"
         }
     ],
     "new": [
         {
             "subject": "protein",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "pancre"
         }
     ],
@@ -51935,14 +51935,14 @@
     "triple_list_pred": [
         {
             "subject": "unit",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "dye"
         }
     ],
     "new": [
         {
             "subject": "unit",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "dye"
         }
     ],
@@ -52245,14 +52245,14 @@
     "triple_list_pred": [
         {
             "subject": "light",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "azim"
         }
     ],
     "new": [
         {
             "subject": "light",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "azim"
         }
     ],
@@ -52307,14 +52307,14 @@
     "triple_list_pred": [
         {
             "subject": "display case",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dessert"
         }
     ],
     "new": [
         {
             "subject": "display case",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "dessert"
         }
     ],
@@ -52400,14 +52400,14 @@
     "triple_list_pred": [
         {
             "subject": "safflower",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "belly "
         }
     ],
     "new": [
         {
             "subject": "safflower",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "belly "
         }
     ],
@@ -52493,14 +52493,14 @@
     "triple_list_pred": [
         {
             "subject": "blood",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cl"
         }
     ],
     "new": [
         {
             "subject": "blood",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cl"
         }
     ],
@@ -52617,14 +52617,14 @@
     "triple_list_pred": [
         {
             "subject": "kids",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "sack"
         }
     ],
     "new": [
         {
             "subject": "kids",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "sack"
         }
     ],
@@ -53330,14 +53330,14 @@
     "triple_list_pred": [
         {
             "subject": "sink",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "stand"
         }
     ],
     "new": [
         {
             "subject": "sink",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "stand"
         }
     ],
@@ -53423,14 +53423,14 @@
     "triple_list_pred": [
         {
             "subject": "boy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "stick"
         }
     ],
     "new": [
         {
             "subject": "boy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "stick"
         }
     ],
@@ -53888,14 +53888,14 @@
     "triple_list_pred": [
         {
             "subject": "treasure trove",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "concerts"
         }
     ],
     "new": [
         {
             "subject": "treasure trove",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "concerts"
         }
     ],
@@ -53981,14 +53981,14 @@
     "triple_list_pred": [
         {
             "subject": "shelf",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "refrigerator"
         }
     ],
     "new": [
         {
             "subject": "shelf",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "refrigerator"
         }
     ],
@@ -54012,14 +54012,14 @@
     "triple_list_pred": [
         {
             "subject": "fluid",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "body"
         }
     ],
     "new": [
         {
             "subject": "fluid",
-            "relation": "Other",
+            "relation": "Entity-Destination(e1,e2)",
             "object": "body"
         }
     ],
@@ -54446,14 +54446,14 @@
     "triple_list_pred": [
         {
             "subject": "scissors",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "styl"
         }
     ],
     "new": [
         {
             "subject": "scissors",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "styl"
         }
     ],
@@ -54477,14 +54477,14 @@
     "triple_list_pred": [
         {
             "subject": "plains",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mountain"
         }
     ],
     "new": [
         {
             "subject": "plains",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "mountain"
         }
     ],
@@ -54663,14 +54663,14 @@
     "triple_list_pred": [
         {
             "subject": "ballet",
-            "relation": "Other",
+            "relation": "Product-Producer(e1,e2)",
             "object": "company"
         }
     ],
     "new": [
         {
             "subject": "ballet",
-            "relation": "Other",
+            "relation": "Product-Producer(e1,e2)",
             "object": "company"
         }
     ],
@@ -55066,14 +55066,14 @@
     "triple_list_pred": [
         {
             "subject": "Personality",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "style"
         }
     ],
     "new": [
         {
             "subject": "Personality",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "style"
         }
     ],
@@ -55531,14 +55531,14 @@
     "triple_list_pred": [
         {
             "subject": "seawater",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "ions"
         }
     ],
     "new": [
         {
             "subject": "seawater",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "ions"
         }
     ],
@@ -56058,14 +56058,14 @@
     "triple_list_pred": [
         {
             "subject": "layer",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "beak"
         }
     ],
     "new": [
         {
             "subject": "layer",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "beak"
         }
     ],
@@ -56306,14 +56306,14 @@
     "triple_list_pred": [
         {
             "subject": "litter",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "litter "
         }
     ],
     "new": [
         {
             "subject": "litter",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "litter "
         }
     ],
@@ -56399,14 +56399,14 @@
     "triple_list_pred": [
         {
             "subject": "Boy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "junk"
         }
     ],
     "new": [
         {
             "subject": "Boy",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "junk"
         }
     ],
@@ -56430,14 +56430,14 @@
     "triple_list_pred": [
         {
             "subject": "issue",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "members"
         }
     ],
     "new": [
         {
             "subject": "issue",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "members"
         }
     ],
@@ -56771,14 +56771,14 @@
     "triple_list_pred": [
         {
             "subject": "array",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "topics"
         }
     ],
     "new": [
         {
             "subject": "array",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "topics"
         }
     ],
@@ -57019,14 +57019,14 @@
     "triple_list_pred": [
         {
             "subject": "technical terms",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "glossary "
         }
     ],
     "new": [
         {
             "subject": "technical terms",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "glossary "
         }
     ],
@@ -57143,14 +57143,14 @@
     "triple_list_pred": [
         {
             "subject": "shell",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "rod"
         }
     ],
     "new": [
         {
             "subject": "shell",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Component-Whole(e1,e2)",
             "object": "rod"
         }
     ],
@@ -57422,14 +57422,14 @@
     "triple_list_pred": [
         {
             "subject": "jokes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "crack"
         }
     ],
     "new": [
         {
             "subject": "jokes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "crack"
         }
     ],
@@ -57701,14 +57701,14 @@
     "triple_list_pred": [
         {
             "subject": "cable network",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "science fiction TV "
         }
     ],
     "new": [
         {
             "subject": "cable network",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Message-Topic(e1,e2)",
             "object": "science fiction TV "
         }
     ],
@@ -57732,14 +57732,14 @@
     "triple_list_pred": [
         {
             "subject": "table",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "data"
         }
     ],
     "new": [
         {
             "subject": "table",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "data"
         }
     ],
@@ -57794,14 +57794,14 @@
     "triple_list_pred": [
         {
             "subject": "Cities",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Other",
             "object": "emissions"
         }
     ],
     "new": [
         {
             "subject": "Cities",
-            "relation": "Cause-Effect(e2,e1)",
+            "relation": "Other",
             "object": "emissions"
         }
     ],
@@ -58073,14 +58073,14 @@
     "triple_list_pred": [
         {
             "subject": "spam",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "inbox "
         }
     ],
     "new": [
         {
             "subject": "spam",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "inbox "
         }
     ],
@@ -58197,14 +58197,14 @@
     "triple_list_pred": [
         {
             "subject": "combination",
-            "relation": "Cause-Effect(e1,e2)",
+            "relation": "Other",
             "object": "factors"
         }
     ],
     "new": [
         {
             "subject": "combination",
-            "relation": "Cause-Effect(e1,e2)",
+            "relation": "Other",
             "object": "factors"
         }
     ],
@@ -58352,14 +58352,14 @@
     "triple_list_pred": [
         {
             "subject": "instrument",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "vacuum "
         }
     ],
     "new": [
         {
             "subject": "instrument",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Content-Container(e1,e2)",
             "object": "vacuum "
         }
     ],
@@ -58383,14 +58383,14 @@
     "triple_list_pred": [
         {
             "subject": "class",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "therapeutic "
         }
     ],
     "new": [
         {
             "subject": "class",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "therapeutic "
         }
     ],
@@ -58848,14 +58848,14 @@
     "triple_list_pred": [
         {
             "subject": "farmer",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "tractor"
         }
     ],
     "new": [
         {
             "subject": "farmer",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "tractor"
         }
     ],
@@ -58910,14 +58910,14 @@
     "triple_list_pred": [
         {
             "subject": "doylt",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "pigs"
         }
     ],
     "new": [
         {
             "subject": "doylt",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "pigs"
         }
     ],
@@ -58941,14 +58941,14 @@
     "triple_list_pred": [
         {
             "subject": "paper",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "thesis"
         }
     ],
     "new": [
         {
             "subject": "paper",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "thesis"
         }
     ],
@@ -58972,14 +58972,14 @@
     "triple_list_pred": [
         {
             "subject": "state",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "report"
         }
     ],
     "new": [
         {
             "subject": "state",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "report"
         }
     ],
@@ -59003,14 +59003,14 @@
     "triple_list_pred": [
         {
             "subject": "knight",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "battle "
         }
     ],
     "new": [
         {
             "subject": "knight",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "battle "
         }
     ],
@@ -59747,14 +59747,14 @@
     "triple_list_pred": [
         {
             "subject": "deck",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cards"
         }
     ],
     "new": [
         {
             "subject": "deck",
-            "relation": "Instrument-Agency(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "cards"
         }
     ],
@@ -60150,14 +60150,14 @@
     "triple_list_pred": [
         {
             "subject": "composer",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "works"
         }
     ],
     "new": [
         {
             "subject": "composer",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "works"
         }
     ],
@@ -60646,14 +60646,14 @@
     "triple_list_pred": [
         {
             "subject": "curbs",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "sidewalks"
         }
     ],
     "new": [
         {
             "subject": "curbs",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Other",
             "object": "sidewalks"
         }
     ],
@@ -60739,14 +60739,14 @@
     "triple_list_pred": [
         {
             "subject": "Religion",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "topic"
         }
     ],
     "new": [
         {
             "subject": "Religion",
-            "relation": "Message-Topic(e2,e1)",
+            "relation": "Other",
             "object": "topic"
         }
     ],
@@ -61080,14 +61080,14 @@
     "triple_list_pred": [
         {
             "subject": "sand",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "beach"
         }
     ],
     "new": [
         {
             "subject": "sand",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "beach"
         }
     ],
@@ -61328,14 +61328,14 @@
     "triple_list_pred": [
         {
             "subject": "praise",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "concern"
         }
     ],
     "new": [
         {
             "subject": "praise",
-            "relation": "Other",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "concern"
         }
     ],
@@ -61390,14 +61390,14 @@
     "triple_list_pred": [
         {
             "subject": "cupful",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "shrimp"
         }
     ],
     "new": [
         {
             "subject": "cupful",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "shrimp"
         }
     ],
@@ -61452,14 +61452,14 @@
     "triple_list_pred": [
         {
             "subject": "outside",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "store"
         }
     ],
     "new": [
         {
             "subject": "outside",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "store"
         }
     ],
@@ -62196,14 +62196,14 @@
     "triple_list_pred": [
         {
             "subject": "server",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "approach"
         }
     ],
     "new": [
         {
             "subject": "server",
-            "relation": "Other",
+            "relation": "Component-Whole(e1,e2)",
             "object": "approach"
         }
     ],
@@ -62289,14 +62289,14 @@
     "triple_list_pred": [
         {
             "subject": "horses",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "stud"
         }
     ],
     "new": [
         {
             "subject": "horses",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "stud"
         }
     ],
@@ -62382,14 +62382,14 @@
     "triple_list_pred": [
         {
             "subject": "heroes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "literature"
         }
     ],
     "new": [
         {
             "subject": "heroes",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "literature"
         }
     ],
@@ -62599,14 +62599,14 @@
     "triple_list_pred": [
         {
             "subject": "community",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "chaos"
         }
     ],
     "new": [
         {
             "subject": "community",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "chaos"
         }
     ],
@@ -63033,14 +63033,14 @@
     "triple_list_pred": [
         {
             "subject": "team",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "team"
         }
     ],
     "new": [
         {
             "subject": "team",
-            "relation": "Other",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "team"
         }
     ],
@@ -63064,14 +63064,14 @@
     "triple_list_pred": [
         {
             "subject": "meal",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "rice"
         }
     ],
     "new": [
         {
             "subject": "meal",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e2,e1)",
             "object": "rice"
         }
     ],
@@ -63312,14 +63312,14 @@
     "triple_list_pred": [
         {
             "subject": "gelding",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nu"
         }
     ],
     "new": [
         {
             "subject": "gelding",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "nu"
         }
     ],
@@ -63436,14 +63436,14 @@
     "triple_list_pred": [
         {
             "subject": "guava",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "sauce"
         }
     ],
     "new": [
         {
             "subject": "guava",
-            "relation": "Entity-Origin(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "sauce"
         }
     ],
@@ -63498,14 +63498,14 @@
     "triple_list_pred": [
         {
             "subject": "pellets",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "plasma"
         }
     ],
     "new": [
         {
             "subject": "pellets",
-            "relation": "Entity-Destination(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "plasma"
         }
     ],
@@ -63777,14 +63777,14 @@
     "triple_list_pred": [
         {
             "subject": "electrician",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "end"
         }
     ],
     "new": [
         {
             "subject": "electrician",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "end"
         }
     ],
@@ -63963,14 +63963,14 @@
     "triple_list_pred": [
         {
             "subject": "student",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Other",
             "object": "request"
         }
     ],
     "new": [
         {
             "subject": "student",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Other",
             "object": "request"
         }
     ],
@@ -64056,14 +64056,14 @@
     "triple_list_pred": [
         {
             "subject": "chairman",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Other",
             "object": "political "
         }
     ],
     "new": [
         {
             "subject": "chairman",
-            "relation": "Member-Collection(e1,e2)",
+            "relation": "Other",
             "object": "political "
         }
     ],
@@ -64149,14 +64149,14 @@
     "triple_list_pred": [
         {
             "subject": "diener",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "scalp"
         }
     ],
     "new": [
         {
             "subject": "diener",
-            "relation": "Other",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "scalp"
         }
     ],
@@ -64242,14 +64242,14 @@
     "triple_list_pred": [
         {
             "subject": "book",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "nanosc"
         }
     ],
     "new": [
         {
             "subject": "book",
-            "relation": "Component-Whole(e2,e1)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "nanosc"
         }
     ],
@@ -64583,14 +64583,14 @@
     "triple_list_pred": [
         {
             "subject": "wine",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "jerobo"
         }
     ],
     "new": [
         {
             "subject": "wine",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "jerobo"
         }
     ],
@@ -64614,14 +64614,14 @@
     "triple_list_pred": [
         {
             "subject": "landscapes",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "mountains"
         }
     ],
     "new": [
         {
             "subject": "landscapes",
-            "relation": "Other",
+            "relation": "Message-Topic(e1,e2)",
             "object": "mountains"
         }
     ],
@@ -64676,14 +64676,14 @@
     "triple_list_pred": [
         {
             "subject": "painter",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "self-portrai"
         }
     ],
     "new": [
         {
             "subject": "painter",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Component-Whole(e2,e1)",
             "object": "self-portrai"
         }
     ],
@@ -64738,14 +64738,14 @@
     "triple_list_pred": [
         {
             "subject": "samples",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "beak"
         }
     ],
     "new": [
         {
             "subject": "samples",
-            "relation": "Content-Container(e1,e2)",
+            "relation": "Entity-Origin(e1,e2)",
             "object": "beak"
         }
     ],
@@ -64862,14 +64862,14 @@
     "triple_list_pred": [
         {
             "subject": "kit",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "pigeons"
         }
     ],
     "new": [
         {
             "subject": "kit",
-            "relation": "Other",
+            "relation": "Member-Collection(e2,e1)",
             "object": "pigeons"
         }
     ],
@@ -65110,14 +65110,14 @@
     "triple_list_pred": [
         {
             "subject": "department",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "business"
         }
     ],
     "new": [
         {
             "subject": "department",
-            "relation": "Component-Whole(e1,e2)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "business"
         }
     ],
@@ -65172,14 +65172,14 @@
     "triple_list_pred": [
         {
             "subject": "electrician",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "tool"
         }
     ],
     "new": [
         {
             "subject": "electrician",
-            "relation": "Instrument-Agency(e1,e2)",
+            "relation": "Cause-Effect(e1,e2)",
             "object": "tool"
         }
     ],
@@ -65792,14 +65792,14 @@
     "triple_list_pred": [
         {
             "subject": "Sets",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "letters"
         }
     ],
     "new": [
         {
             "subject": "Sets",
-            "relation": "Other",
+            "relation": "Component-Whole(e2,e1)",
             "object": "letters"
         }
     ],
@@ -65854,14 +65854,14 @@
     "triple_list_pred": [
         {
             "subject": "circus",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "artists"
         }
     ],
     "new": [
         {
             "subject": "circus",
-            "relation": "Member-Collection(e2,e1)",
+            "relation": "Cause-Effect(e2,e1)",
             "object": "artists"
         }
     ],
@@ -66350,14 +66350,14 @@
     "triple_list_pred": [
         {
             "subject": "engineers",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "chips"
         }
     ],
     "new": [
         {
             "subject": "engineers",
-            "relation": "Product-Producer(e2,e1)",
+            "relation": "Instrument-Agency(e2,e1)",
             "object": "chips"
         }
     ],

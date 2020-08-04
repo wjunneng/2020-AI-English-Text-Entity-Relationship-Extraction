@@ -10,6 +10,7 @@ os.chdir(sys.path[0])
 
 import pandas as pd
 from tqdm import tqdm
+from collections import defaultdict
 import json
 import random
 import numpy as np
@@ -74,6 +75,8 @@ class Util(object):
         # 'text', 'label'
         train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
 
+        text_length_count = defaultdict(lambda: 0)
+
         result = []
         for train_index in range(train_df.shape[0]):
             text = train_df.iloc[train_index, 0]
@@ -92,6 +95,8 @@ class Util(object):
 
             result.append(sample)
 
+            text_length_count[len(text.split(' '))] += 1
+
         random.shuffle(result)
 
         result_length = len(result)
@@ -107,10 +112,59 @@ class Util(object):
         with open(self.test_json_path, encoding='utf-8', mode='w') as file:
             json.dump(obj=dev_result, ensure_ascii=False, fp=file)
 
+        # [(85, 1), (82, 1), (67, 1), (65, 1), (64, 2), (63, 1), (61, 1), (60, 1), (58, 3), (57, 4), (55, 1), (54, 2),
+        # (53, 2), (52, 4), (51, 2), (50, 5), (49, 2), (48, 2), (47, 3), (46, 2), (45, 6), (44, 9), (43, 11), (42, 15),
+        # (41, 9), (40, 21), (39, 14), (38, 25), (37, 24), (36, 28), (35, 32), (34, 33), (33, 52), (32, 60), (31, 49),
+        # (30, 61), (29, 89), (28, 123), (27, 137), (26, 169), (25, 227), (24, 233), (23, 280), (22, 329), (21, 356),
+        # (20, 395), (19, 435), (18, 431), (17, 446), (16, 475), (15, 456), (14, 456), (13, 483), (12, 494), (11, 476),
+        # (10, 427), (9, 419), (8, 372), (7, 236), (6, 105), (5, 26), (4, 7), (3, 1)]
+        text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
+        print('text_length_count: {}'.format(text_length_count))
+
+    def generate_test_json(self):
+        """
+        生成测试集结果
+        :return:
+        """
+        test_df = pd.read_csv(self.test_csv_path, encoding='utf-8')
+        text_length_count = defaultdict(lambda: 0)
+
+        result = []
+        for train_index in range(test_df.shape[0]):
+            text = test_df.iloc[train_index, 1]
+
+            sample = {}
+            subject = re.split('<e1>|</e1>', text)[1]
+            object = re.split('<e2>|</e2>', text)[1]
+
+            text = text.strip('"')
+            text = text.replace('<e1>' + subject + '</e1>', subject)
+            text = text.replace('<e2>' + object + '</e2>', object)
+
+            sample['text'] = text
+            sample['triple_list'] = [[subject, 'None', object]]
+
+            result.append(sample)
+
+            text_length_count[len(text.split(' '))] += 1
+
+        with open(self.test_json_path, encoding='utf-8', mode='w') as file:
+            json.dump(obj=result, ensure_ascii=False, fp=file)
+
+        # [(79, 1), (66, 1), (58, 1), (57, 1), (54, 1), (50, 1), (49, 1), (48, 1), (47, 3), (46, 1), (45, 1), (44, 3),
+        # (43, 2), (42, 2), (41, 4), (40, 5), (39, 4), (38, 5), (37, 4), (36, 8), (35, 7), (34, 12), (33, 11), (32, 7),
+        # (31, 18), (30, 17), (29, 20), (28, 37), (27, 30), (26, 44), (25, 44), (24, 63), (23, 85), (22, 70), (21, 85),
+        # (20, 110), (19, 103), (18, 105), (17, 106), (16, 119), (15, 121), (14, 110), (13, 124), (12, 125), (11, 122),
+        # (10, 107), (9, 100), (8, 92), (7, 60), (6, 31), (5, 8), (4, 1)]
+        text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
+        print('text_length_count: {}'.format(text_length_count))
+
 
 if __name__ == '__main__':
     util = Util()
 
     # util.generate_rel2id_json()
 
-    util.generate_train_dev_test_json()
+    # util.generate_train_dev_test_json()
+
+    util.generate_test_json()

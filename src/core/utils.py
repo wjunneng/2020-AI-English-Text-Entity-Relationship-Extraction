@@ -5,6 +5,7 @@ import numpy as np
 import codecs
 from tqdm import tqdm
 import json
+import csv
 import unicodedata
 
 BERT_MAX_LEN = 512
@@ -63,6 +64,65 @@ def extract_items(subject_model, object_model, tokenizer, text_in, id2rel, h_bar
             sub_tail = sub_tail[0]
             subject = tokens[sub_head: sub_tail]
             subjects.append((subject, sub_head, sub_tail))
+    if subjects:  # [(['indicator'], 6, 7)]
+        triple_list = []
+        token_ids = np.repeat(token_ids, len(subjects), 0)
+        segment_ids = np.repeat(segment_ids, len(subjects), 0)
+        sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
+        obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
+        for i, subject in enumerate(subjects):
+            sub = subject[0]
+            sub = ''.join([i.lstrip("##") for i in sub])
+            sub = ' '.join(sub.split('[unused1]'))
+            obj_heads, obj_tails = np.where(obj_heads_logits[i] > h_bar), np.where(obj_tails_logits[i] > t_bar)
+            for obj_head, rel_head in zip(*obj_heads):
+                for obj_tail, rel_tail in zip(*obj_tails):
+                    if obj_head <= obj_tail and rel_head == rel_tail:
+                        rel = id2rel[rel_head]
+                        obj = tokens[obj_head: obj_tail]
+                        obj = ''.join([i.lstrip("##") for i in obj])
+                        obj = ' '.join(obj.split('[unused1]'))
+                        triple_list.append((sub, rel, obj))
+                        break
+        triple_set = set()
+        for s, r, o in triple_list:
+            triple_set.add((s, r, o))
+        return list(triple_set)
+    else:
+        return []
+
+
+def extract_items_new(subject, object_model, tokenizer, text_in, id2rel, h_bar=0.5, t_bar=0.5):
+    tokens = tokenizer.tokenize(text_in)
+    print(tokens)
+
+    token_index = 0
+    subject_start_index, subject_end_index = -1, -1
+    subject_ = subject.replace(' ', '[unused1]')
+
+    while subject_ != '':
+        token_text = tokens[token_index].replace('##', '')
+        if token_text == subject_[:len(token_text)]:
+            if subject_start_index == -1:
+                subject_start_index = token_index
+            else:
+                subject_end_index = token_index
+
+            subject_ = subject_[len(token_text):]
+        else:
+            subject_start_index, subject_end_index = -1, -1
+            subject_ = subject.replace(' ', '[unused1]')
+
+        token_index += 1
+
+    if subject_end_index == -1:
+        subject_end_index = subject_start_index + 1
+
+    subjects = [([subject], subject_start_index, subject_end_index)]
+    print('subjects: {}'.format(subjects))
+    token_ids, segment_ids = tokenizer.encode(first=text_in)
+    token_ids, segment_ids = np.array([token_ids]), np.array([segment_ids])
+    # [(['indicator'], 6, 7)]
     if subjects:
         triple_list = []
         token_ids = np.repeat(token_ids, len(subjects), 0)
@@ -99,13 +159,28 @@ def partial_match(pred_set, gold_set):
     return pred, gold
 
 
-def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_match=False, output_path=None):
+def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_match=False, output_path=None,
+           submit_path=None):
     if output_path:
         F = open(output_path, 'w')
+        S = open(submit_path, 'w', newline='')
+        S_writer = csv.writer(S)
+
     orders = ['subject', 'relation', 'object']
     correct_num, predict_num, gold_num = 1e-10, 1e-10, 1e-10
-    for line in tqdm(iter(eval_data)):
-        Pred_triples = set(extract_items(subject_model, object_model, tokenizer, line['text'], id2rel))
+    # {'text': 'The red indicator light on my telephone continues to blink after I have checked and emptied my mailbox.', 'triple_list': [('light', 'None', 'telephone')]}
+    for line_index, line in tqdm(enumerate(iter(eval_data))):
+        # ############# 原始 #############
+        # Pred_triples = set(extract_items(subject_model, object_model, tokenizer, line['text'], id2rel))
+        # ############# 原始 #############
+
+        # ############# 更改 #############
+        print('text: {}'.format(line['text']))
+        subject = line['triple_list'][0][0]
+        print('subject: {}'.format(subject))
+        Pred_triples = set(extract_items_new(subject, object_model, tokenizer, line['text'], id2rel))
+        # ############# 更改 #############
+
         Gold_triples = set(line['triple_list'])
 
         Pred_triples_eval, Gold_triples_eval = partial_match(Pred_triples, Gold_triples) if not exact_match else (
@@ -132,8 +207,29 @@ def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_matc
                 ]
             }, ensure_ascii=False, indent=4)
             F.write(result + '\n')
+
+            if len(Pred_triples) == 0:
+                S_writer.writerow([line_index, ''])
+                continue
+
+            for triple_index, triple in enumerate(Pred_triples):
+                subject = triple[0]
+                relation = triple[1]
+                object = triple[2]
+
+                if subject == list(Gold_triples)[0][0] and object == list(Gold_triples)[0][2]:
+                    S_writer.writerow([line_index, relation])
+                    break
+
+                # if subject == list(Gold_triples)[0][2] and object == list(Gold_triples)[0][0]:
+                #     print(line_index)
+
+                if triple_index == len(Pred_triples) - 1:
+                    S_writer.writerow([line_index, ''])
+
     if output_path:
         F.close()
+        S.close()
 
     precision = correct_num / predict_num
     recall = correct_num / gold_num

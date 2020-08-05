@@ -124,7 +124,7 @@ def get_start_end_index(tokens, target):
     return start_index, end_index
 
 
-def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel, h_bar=0.5, t_bar=0.5):
+def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel):
     tokens = tokenizer.tokenize(text_in)
     subject_start_index, subject_end_index = get_start_end_index(tokens=tokens, target=subject)
     object_start_index, object_end_index = get_start_end_index(tokens=tokens, target=object)
@@ -304,24 +304,9 @@ def metric_new(object_model, eval_data, id2rel, tokenizer, exact_match=False, ou
             }, ensure_ascii=False, indent=4)
             F.write(result + '\n')
 
-            if len(Pred_triples) == 0:
-                S_writer.writerow([line_index, ''])
-                continue
-
             for triple_index, triple in enumerate(Pred_triples):
-                subject = triple[0]
                 relation = triple[1]
-                object = triple[2]
-
-                if subject == list(Gold_triples)[0][0] and object == list(Gold_triples)[0][2]:
-                    S_writer.writerow([line_index, relation])
-                    break
-
-                # if subject == list(Gold_triples)[0][2] and object == list(Gold_triples)[0][0]:
-                #     print(line_index)
-
-                if triple_index == len(Pred_triples) - 1:
-                    S_writer.writerow([line_index, ''])
+                S_writer.writerow([line_index, relation])
 
     if output_path:
         F.close()

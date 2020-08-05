@@ -165,6 +165,6 @@ if __name__ == '__main__':
 
     # util.generate_rel2id_json()
 
-    # util.generate_train_dev_test_json()
+    util.generate_train_dev_test_json()
 
-    util.generate_test_json()
+    # util.generate_test_json()

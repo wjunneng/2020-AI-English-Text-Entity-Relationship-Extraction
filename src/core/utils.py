@@ -156,7 +156,8 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel,
 
             # index对应的socre进行相加
             heads_tails_socre_array = np.sum(
-                [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))], axis=0)
+                [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))],
+                axis=0)
             heads_tails_index_socre_dict = dict(zip(list(heads_index_score_dict.keys()), heads_tails_socre_array))
             heads_tails_index_socre_dict = sorted(heads_tails_index_socre_dict.items(), key=lambda a: a[1])
 
@@ -210,8 +211,51 @@ def partial_match(pred_set, gold_set):
     return pred, gold
 
 
-def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_match=False, output_path=None,
-           submit_path=None):
+def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_match=False, output_path=None):
+    if output_path:
+        F = open(output_path, 'w')
+    orders = ['subject', 'relation', 'object']
+    correct_num, predict_num, gold_num = 1e-10, 1e-10, 1e-10
+    for line in tqdm(iter(eval_data)):
+        Pred_triples = set(extract_items(subject_model, object_model, tokenizer, line['text'], id2rel))
+        Gold_triples = set(line['triple_list'])
+
+        Pred_triples_eval, Gold_triples_eval = partial_match(Pred_triples, Gold_triples) if not exact_match else (
+            Pred_triples, Gold_triples)
+
+        correct_num += len(Pred_triples_eval & Gold_triples_eval)
+        predict_num += len(Pred_triples_eval)
+        gold_num += len(Gold_triples_eval)
+
+        if output_path:
+            result = json.dumps({
+                'text': line['text'],
+                'triple_list_gold': [
+                    dict(zip(orders, triple)) for triple in Gold_triples
+                ],
+                'triple_list_pred': [
+                    dict(zip(orders, triple)) for triple in Pred_triples
+                ],
+                'new': [
+                    dict(zip(orders, triple)) for triple in Pred_triples - Gold_triples
+                ],
+                'lack': [
+                    dict(zip(orders, triple)) for triple in Gold_triples - Pred_triples
+                ]
+            }, ensure_ascii=False, indent=4)
+            F.write(result + '\n')
+    if output_path:
+        F.close()
+
+    precision = correct_num / predict_num
+    recall = correct_num / gold_num
+    f1_score = 2 * precision * recall / (precision + recall)
+
+    print(f'correct_num:{correct_num}\npredict_num:{predict_num}\ngold_num:{gold_num}')
+    return precision, recall, f1_score
+
+
+def metric_new(object_model, eval_data, id2rel, tokenizer, exact_match=False, output_path=None, submit_path=None):
     if output_path:
         F = open(output_path, 'w')
         S = open(submit_path, 'w', newline='')
@@ -227,14 +271,10 @@ def metric(subject_model, object_model, eval_data, id2rel, tokenizer, exact_matc
         # ############# 原始 #############
 
         # ############# 更改 #############
-        print('\n')
-        print('text: {}'.format(line['text']))
         subject = line['triple_list'][0][0]
         object = line['triple_list'][0][2]
-        print('subject: {}, object: {}'.format(subject, object))
         Pred_triples = set(extract_items_new(subject=subject, object=object, object_model=object_model,
                                              tokenizer=tokenizer, text_in=line['text'], id2rel=id2rel))
-        print('pred_triples: {}'.format(Pred_triples))
         # ############# 更改 #############
 
         Gold_triples = set(line['triple_list'])

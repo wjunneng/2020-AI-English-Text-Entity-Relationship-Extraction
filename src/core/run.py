@@ -12,7 +12,7 @@ os.chdir(sys.path[-1])
 import argparse
 from src.core.data_loader import data_generator, load_data
 from src.core.model import E2EModel, Evaluate
-from src.core.utils import get_tokenizer, metric
+from src.core.utils import get_tokenizer, metric, metric_new
 from src.conf.config import PATH
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -29,8 +29,6 @@ parser.add_argument('--train', default=True, type=bool, help='to train the HBT m
 args = parser.parse_args()
 
 if __name__ == '__main__':
-    args.train = False
-
     # pre-trained bert model config
     bert_config_path = PATH.PRE_TRAIN_MODEL_DIR + '/bert_config.json'
     bert_vocab_path = PATH.PRE_TRAIN_MODEL_DIR + '/vocab.txt'
@@ -67,6 +65,6 @@ if __name__ == '__main__':
             print("Exact Match")
         else:
             print("Partial Match")
-        precision, recall, f1_score = metric(subject_model, object_model, test_data, id2rel, tokenizer, isExactMatch,
+        precision, recall, f1_score = metric_new(subject_model, object_model, test_data, id2rel, tokenizer, isExactMatch,
                                              test_result_path, test_submit_path)
         print(f'{precision}\t{recall}\t{f1_score}')

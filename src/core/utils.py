@@ -133,6 +133,49 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel)
     token_ids, segment_ids = tokenizer.encode(first=text_in)
     token_ids, segment_ids = np.array([token_ids]), np.array([segment_ids])
     # [(['indicator'], 6, 7)]
+    # if subjects:
+    #     triple_list = []
+    #     token_ids = np.repeat(token_ids, len(subjects), 0)
+    #     segment_ids = np.repeat(segment_ids, len(subjects), 0)
+    #     sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
+    #     obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
+    #     for i, subject in enumerate(subjects):
+    #         sub = subject[0]
+    #         sub = ''.join([i.lstrip("##") for i in sub])
+    #         sub = ' '.join(sub.split('[unused1]'))
+    #
+    #         heads_index_score_dict = dict(zip(list(np.argsort(-obj_heads_logits[i][object_start_index, :])),
+    #                                           [i for i in range(len(obj_heads_logits[i][object_start_index, :]))]))
+    #         tails_index_score_dict = dict(zip(list(np.argsort(-obj_tails_logits[i][object_end_index, :])),
+    #                                           [i for i in range(len(obj_tails_logits[i][object_end_index, :]))]))
+    #
+    #         # 按照index进行排序
+    #         heads_index_score_dict = dict(sorted(heads_index_score_dict.items(), key=lambda a: a[0]))
+    #         # 按照index进行排序
+    #         tails_index_score_dict = dict(sorted(tails_index_score_dict.items(), key=lambda a: a[0]))
+    #
+    #         # index对应的socre进行相加
+    #         heads_tails_socre_array = np.sum(
+    #             [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))],
+    #             axis=0)
+    #         heads_tails_index_socre_dict = dict(zip(list(heads_index_score_dict.keys()), heads_tails_socre_array))
+    #         heads_tails_index_socre_dict = sorted(heads_tails_index_socre_dict.items(), key=lambda a: a[1])
+    #
+    #         rel_index = heads_tails_index_socre_dict[0][0]
+    #         rel = id2rel[rel_index]
+    #         obj = tokens[object_start_index: object_end_index]
+    #         obj = ''.join([i.lstrip("##") for i in obj])
+    #         obj = ' '.join(obj.split('[unused1]'))
+    #         triple_list.append((sub, rel, obj))
+    #
+    #     triple_set = set()
+    #     for s, r, o in triple_list:
+    #         triple_set.add((s, r, o))
+    #     return list(triple_set)
+    # else:
+    #     return []
+
+    # [(['indicator'], 6, 7)]
     if subjects:
         triple_list = []
         token_ids = np.repeat(token_ids, len(subjects), 0)
@@ -144,24 +187,9 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel)
             sub = ''.join([i.lstrip("##") for i in sub])
             sub = ' '.join(sub.split('[unused1]'))
 
-            heads_index_score_dict = dict(zip(list(np.argsort(-obj_heads_logits[i][object_start_index, :])),
-                                              [i for i in range(len(obj_heads_logits[i][object_start_index, :]))]))
-            tails_index_score_dict = dict(zip(list(np.argsort(-obj_tails_logits[i][object_end_index, :])),
-                                              [i for i in range(len(obj_tails_logits[i][object_end_index, :]))]))
+            heads_index_score_list = list(np.argsort(-obj_heads_logits[i][object_start_index, :]))
 
-            # 按照index进行排序
-            heads_index_score_dict = dict(sorted(heads_index_score_dict.items(), key=lambda a: a[0]))
-            # 按照index进行排序
-            tails_index_score_dict = dict(sorted(tails_index_score_dict.items(), key=lambda a: a[0]))
-
-            # index对应的socre进行相加
-            heads_tails_socre_array = np.sum(
-                [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))],
-                axis=0)
-            heads_tails_index_socre_dict = dict(zip(list(heads_index_score_dict.keys()), heads_tails_socre_array))
-            heads_tails_index_socre_dict = sorted(heads_tails_index_socre_dict.items(), key=lambda a: a[1])
-
-            rel_index = heads_tails_index_socre_dict[0][0]
+            rel_index = heads_index_score_list[0]
             rel = id2rel[rel_index]
             obj = tokens[object_start_index: object_end_index]
             obj = ''.join([i.lstrip("##") for i in obj])
@@ -174,33 +202,6 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel)
         return list(triple_set)
     else:
         return []
-
-    # if subjects:
-    #     triple_list = []
-    #     token_ids = np.repeat(token_ids, len(subjects), 0)
-    #     segment_ids = np.repeat(segment_ids, len(subjects), 0)
-    #     sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
-    #     obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
-    #     for i, subject in enumerate(subjects):
-    #         sub = subject[0]
-    #         sub = ''.join([i.lstrip("##") for i in sub])
-    #         sub = ' '.join(sub.split('[unused1]'))
-    #         obj_heads, obj_tails = np.where(obj_heads_logits[i] > h_bar), np.where(obj_tails_logits[i] > t_bar)
-    #         for obj_head, rel_head in zip(*obj_heads):
-    #             for obj_tail, rel_tail in zip(*obj_tails):
-    #                 if obj_head <= obj_tail and rel_head == rel_tail:
-    #                     rel = id2rel[rel_head]
-    #                     obj = tokens[obj_head: obj_tail]
-    #                     obj = ''.join([i.lstrip("##") for i in obj])
-    #                     obj = ' '.join(obj.split('[unused1]'))
-    #                     triple_list.append((sub, rel, obj))
-    #                     break
-    #     triple_set = set()
-    #     for s, r, o in triple_list:
-    #         triple_set.add((s, r, o))
-    #     return list(triple_set)
-    # else:
-    #     return []
 
 
 def partial_match(pred_set, gold_set):

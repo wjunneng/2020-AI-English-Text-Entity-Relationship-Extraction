@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 # project_dir = str(Path(__file__).parent.parent.parent)
-project_dir = '/'
+project_dir = '/home/wjunneng/Ubuntu/2020-AI-English-Text-Entity-Relationship-Extraction'
 
 sys.path.append(project_dir)
 os.chdir(sys.path[-1])

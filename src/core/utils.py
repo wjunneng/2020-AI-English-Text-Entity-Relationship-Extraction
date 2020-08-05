@@ -129,44 +129,38 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel)
     subject_start_index, subject_end_index = get_start_end_index(tokens=tokens, target=subject)
     object_start_index, object_end_index = get_start_end_index(tokens=tokens, target=object)
 
-    subjects = [([subject], subject_start_index, subject_end_index)]
+    subjects = [(subject, subject_start_index, subject_end_index)]
     token_ids, segment_ids = tokenizer.encode(first=text_in)
     token_ids, segment_ids = np.array([token_ids]), np.array([segment_ids])
-    # [(['indicator'], 6, 7)]
+
+    # # [(['indicator'], 6, 7)]
     # if subjects:
     #     triple_list = []
     #     token_ids = np.repeat(token_ids, len(subjects), 0)
     #     segment_ids = np.repeat(segment_ids, len(subjects), 0)
     #     sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
     #     obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
-    #     for i, subject in enumerate(subjects):
-    #         sub = subject[0]
-    #         sub = ''.join([i.lstrip("##") for i in sub])
-    #         sub = ' '.join(sub.split('[unused1]'))
     #
-    #         heads_index_score_dict = dict(zip(list(np.argsort(-obj_heads_logits[i][object_start_index, :])),
-    #                                           [i for i in range(len(obj_heads_logits[i][object_start_index, :]))]))
-    #         tails_index_score_dict = dict(zip(list(np.argsort(-obj_tails_logits[i][object_end_index, :])),
-    #                                           [i for i in range(len(obj_tails_logits[i][object_end_index, :]))]))
+    #     heads_index_score_dict = dict(zip(list(np.argsort(-obj_heads_logits[0][object_start_index, :])),
+    #                                       [i for i in range(len(obj_heads_logits[0][object_start_index, :]))]))
+    #     tails_index_score_dict = dict(zip(list(np.argsort(-obj_tails_logits[0][object_end_index, :])),
+    #                                       [i for i in range(len(obj_tails_logits[0][object_end_index, :]))]))
     #
-    #         # 按照index进行排序
-    #         heads_index_score_dict = dict(sorted(heads_index_score_dict.items(), key=lambda a: a[0]))
-    #         # 按照index进行排序
-    #         tails_index_score_dict = dict(sorted(tails_index_score_dict.items(), key=lambda a: a[0]))
+    #     # 按照index进行排序
+    #     heads_index_score_dict = dict(sorted(heads_index_score_dict.items(), key=lambda a: a[0]))
+    #     # 按照index进行排序
+    #     tails_index_score_dict = dict(sorted(tails_index_score_dict.items(), key=lambda a: a[0]))
     #
-    #         # index对应的socre进行相加
-    #         heads_tails_socre_array = np.sum(
-    #             [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))],
-    #             axis=0)
-    #         heads_tails_index_socre_dict = dict(zip(list(heads_index_score_dict.keys()), heads_tails_socre_array))
-    #         heads_tails_index_socre_dict = sorted(heads_tails_index_socre_dict.items(), key=lambda a: a[1])
+    #     # index对应的socre进行相加
+    #     heads_tails_socre_array = np.sum(
+    #         [np.asarray(list(heads_index_score_dict.values())), np.asarray(list(tails_index_score_dict.values()))],
+    #         axis=0)
+    #     heads_tails_index_socre_dict = dict(zip(list(heads_index_score_dict.keys()), heads_tails_socre_array))
+    #     heads_tails_index_socre_dict = sorted(heads_tails_index_socre_dict.items(), key=lambda a: a[1])
     #
-    #         rel_index = heads_tails_index_socre_dict[0][0]
-    #         rel = id2rel[rel_index]
-    #         obj = tokens[object_start_index: object_end_index]
-    #         obj = ''.join([i.lstrip("##") for i in obj])
-    #         obj = ' '.join(obj.split('[unused1]'))
-    #         triple_list.append((sub, rel, obj))
+    #     rel_index = heads_tails_index_socre_dict[0][0]
+    #     rel = id2rel[rel_index]
+    #     triple_list.append((subject, rel, object))
     #
     #     triple_set = set()
     #     for s, r, o in triple_list:
@@ -176,25 +170,19 @@ def extract_items_new(subject, object, object_model, tokenizer, text_in, id2rel)
     #     return []
 
     # [(['indicator'], 6, 7)]
+    # 效果较好
     if subjects:
         triple_list = []
         token_ids = np.repeat(token_ids, len(subjects), 0)
         segment_ids = np.repeat(segment_ids, len(subjects), 0)
         sub_heads, sub_tails = np.array([sub[1:] for sub in subjects]).T.reshape((2, -1, 1))
         obj_heads_logits, obj_tails_logits = object_model.predict([token_ids, segment_ids, sub_heads, sub_tails])
-        for i, subject in enumerate(subjects):
-            sub = subject[0]
-            sub = ''.join([i.lstrip("##") for i in sub])
-            sub = ' '.join(sub.split('[unused1]'))
 
-            heads_index_score_list = list(np.argsort(-obj_heads_logits[i][object_start_index, :]))
+        heads_index_score_list = list(np.argsort(-obj_heads_logits[0][object_start_index, :]))
 
-            rel_index = heads_index_score_list[0]
-            rel = id2rel[rel_index]
-            obj = tokens[object_start_index: object_end_index]
-            obj = ''.join([i.lstrip("##") for i in obj])
-            obj = ' '.join(obj.split('[unused1]'))
-            triple_list.append((sub, rel, obj))
+        rel_index = heads_index_score_list[0]
+        rel = id2rel[rel_index]
+        triple_list.append((subject, rel, object))
 
         triple_set = set()
         for s, r, o in triple_list:
@@ -283,24 +271,19 @@ def metric_new(object_model, eval_data, id2rel, tokenizer, exact_match=False, ou
         if output_path:
             result = json.dumps({
                 'text': line['text'],
-                'triple_list_gold': [
-                    dict(zip(orders, triple)) for triple in Gold_triples
-                ],
-                'triple_list_pred': [
-                    dict(zip(orders, triple)) for triple in Pred_triples
-                ],
-                'new': [
-                    dict(zip(orders, triple)) for triple in Pred_triples - Gold_triples
-                ],
-                'lack': [
-                    dict(zip(orders, triple)) for triple in Gold_triples - Pred_triples
-                ]
-            }, ensure_ascii=False, indent=4)
+                'triple_list_gold': [dict(zip(orders, triple)) for triple in Gold_triples],
+                'triple_list_pred': [dict(zip(orders, triple)) for triple in Pred_triples],
+                'new': [dict(zip(orders, triple)) for triple in Pred_triples - Gold_triples],
+                'lack': [dict(zip(orders, triple)) for triple in Gold_triples - Pred_triples]}, ensure_ascii=False,
+                indent=4)
             F.write(result + '\n')
 
-            for triple_index, triple in enumerate(Pred_triples):
-                relation = triple[1]
-                S_writer.writerow([line_index, relation])
+            if list(Pred_triples)[0][0] != list(Gold_triples)[0][0] or list(Pred_triples)[0][2] != \
+                    list(Gold_triples)[0][2]:
+                print(Pred_triples, Gold_triples)
+
+            relation = list(Pred_triples)[0][1]
+            S_writer.writerow([line_index, relation])
 
     if output_path:
         F.close()

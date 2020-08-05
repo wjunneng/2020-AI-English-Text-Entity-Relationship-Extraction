@@ -51,9 +51,9 @@ if __name__ == '__main__':
                                                                           rel_dict_path)
     subject_model, object_model, hbt_model = E2EModel(bert_config_path, bert_checkpoint_path, LR, num_rels)
 
-    BATCH_SIZE = 8
+    BATCH_SIZE = 6
     EPOCH = 100
-    MAX_LEN = 96
+    MAX_LEN = 88
     STEPS = len(train_data) // BATCH_SIZE
     data_manager = data_generator(train_data, tokenizer, rel2id, num_rels, MAX_LEN, BATCH_SIZE)
     evaluator = Evaluate(subject_model, object_model, tokenizer, id2rel, dev_data, save_weights_path)

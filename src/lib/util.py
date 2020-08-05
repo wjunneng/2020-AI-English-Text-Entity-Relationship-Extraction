@@ -67,11 +67,15 @@ class Util(object):
             json.dump(obj=[id2rel, rel2id], fp=file)
 
     @staticmethod
-    def get_result(df):
+    def get_result(df, test=False):
         result = []
         for index in range(df.shape[0]):
-            text = df.iloc[index, 0]
-            label = df.iloc[index, 1]
+            if test:
+                text = df.iloc[index, 1]
+                label = None
+            else:
+                text = df.iloc[index, 0]
+                label = df.iloc[index, 1]
 
             sample = {}
             subject = re.split('<e1>|</e1>', text)[1]
@@ -223,26 +227,8 @@ class Util(object):
         :return:
         """
         test_df = pd.read_csv(self.test_csv_path, encoding='utf-8')
-        text_length_count = defaultdict(lambda: 0)
 
-        result = []
-        for train_index in range(test_df.shape[0]):
-            text = test_df.iloc[train_index, 1]
-
-            sample = {}
-            subject = re.split('<e1>|</e1>', text)[1]
-            object = re.split('<e2>|</e2>', text)[1]
-
-            text = text.strip('"')
-            text = text.replace('<e1>' + subject + '</e1>', subject)
-            text = text.replace('<e2>' + object + '</e2>', object)
-
-            sample['text'] = text
-            sample['triple_list'] = [[subject, 'None', object]]
-
-            result.append(sample)
-
-            text_length_count[len(text.split(' '))] += 1
+        result = Util.get_result(df=test_df, test=True)
 
         with open(self.test_json_path, encoding='utf-8', mode='w') as file:
             json.dump(obj=result, ensure_ascii=False, fp=file)
@@ -252,8 +238,6 @@ class Util(object):
         # (31, 18), (30, 17), (29, 20), (28, 37), (27, 30), (26, 44), (25, 44), (24, 63), (23, 85), (22, 70), (21, 85),
         # (20, 110), (19, 103), (18, 105), (17, 106), (16, 119), (15, 121), (14, 110), (13, 124), (12, 125), (11, 122),
         # (10, 107), (9, 100), (8, 92), (7, 60), (6, 31), (5, 8), (4, 1)]
-        text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
-        print('text_length_count: {}'.format(text_length_count))
 
 
 if __name__ == '__main__':
@@ -261,6 +245,6 @@ if __name__ == '__main__':
 
     # util.generate_rel2id_json()
 
-    util.generate_train_dev_test_json()
+    # util.generate_train_dev_test_json()
 
-    # util.generate_test_json()
+    util.generate_test_json()

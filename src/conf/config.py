@@ -26,6 +26,7 @@ class PATH(object):
     rel2id_json_path = os.path.join(OUTPUT_DIR, 'rel2id.json')
 
     submit_csv_path = os.path.join(INPUT_DIR, 'submit.csv')
+    recall_submit_csv_path = os.path.join(INPUT_DIR, 'recall_submit.csv')
 
 
 for item in PATH.__dict__:

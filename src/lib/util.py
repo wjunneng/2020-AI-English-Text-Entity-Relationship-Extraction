@@ -230,16 +230,8 @@ class Util(object):
         :return:
         """
         test_df = pd.read_csv(self.test_csv_path, encoding='utf-8')
-        train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
 
-        _, test_result = Util.get_result(df=test_df, test=True)
-        _, train_result = Util.get_result(df=train_df)
-
-        for test_text in test_result:
-            if test_text in train_result:
-                print('\n')
-                print('---', test_text)
-
+        test_result, test_text_result = Util.get_result(df=test_df, test=True)
 
         with open(self.test_json_path, encoding='utf-8', mode='w') as file:
             json.dump(obj=test_result, ensure_ascii=False, fp=file)
@@ -250,6 +242,13 @@ class Util(object):
         # (20, 110), (19, 103), (18, 105), (17, 106), (16, 119), (15, 121), (14, 110), (13, 124), (12, 125), (11, 122),
         # (10, 107), (9, 100), (8, 92), (7, 60), (6, 31), (5, 8), (4, 1)]
 
+    def generate_recall_submit_csv(self):
+        """
+        生成提交结果
+        :return:
+        """
+        pass
+
 
 if __name__ == '__main__':
     util = Util()
@@ -258,4 +257,6 @@ if __name__ == '__main__':
 
     # util.generate_train_dev_test_json()
 
-    util.generate_test_json()
+    # util.generate_test_json()
+
+    util.generate_recall_submit_csv()

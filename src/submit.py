@@ -53,12 +53,12 @@ if __name__ == '__main__':
 
     hbt_model.load_weights(save_weights_path)
     test_result_path = PATH.OUTPUT_DIR + '/test_result.json'
-    test_submit_path = PATH.OUTPUT_DIR + '/submit.csv'
+    test_submit_path = PATH.submit_csv_path
     isExactMatch = False
     if isExactMatch:
         print("Exact Match")
     else:
         print("Partial Match")
     precision, recall, f1_score = metric_new(object_model, test_data, id2rel, tokenizer, isExactMatch,
-                                         test_result_path, test_submit_path)
+                                             test_result_path, test_submit_path)
     print(f'{precision}\t{recall}\t{f1_score}')

@@ -7,7 +7,7 @@ from keras.optimizers import Adam
 from keras_bert import load_trained_model_from_checkpoint
 import numpy as np
 
-from src.core.utils import seq_gather, metric
+from src.core.utils import seq_gather, metric_new
 
 
 def E2EModel(bert_config_path, bert_checkpoint_path, LR, num_rels):
@@ -91,8 +91,11 @@ class Evaluate(Callback):
         self.best = -np.Inf
 
     def on_epoch_end(self, epoch, logs=None):
-        precision, recall, f1 = metric(self.subject_model, self.object_model, self.eval_data, self.id2rel,
-                                       self.tokenizer)
+        # precision, recall, f1 = metric(self.subject_model, self.object_model, self.eval_data, self.id2rel,
+        #                                self.tokenizer)
+        precision, recall, f1 = metric_new(object_model=self.object_model, eval_data=self.eval_data, id2rel=self.id2rel,
+                                           tokenizer=self.tokenizer)
+
         if self.monitor_op(f1 - self.min_delta, self.best) or self.monitor_op(self.min_delta, f1):
             self.best = f1
             self.wait = 0

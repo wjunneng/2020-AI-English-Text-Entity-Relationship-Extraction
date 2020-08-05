@@ -267,17 +267,10 @@ def metric_new(object_model, eval_data, id2rel, tokenizer, exact_match=False, ou
     # {'text': 'The red indicator light on my telephone continues to blink after I have checked and emptied my mailbox.'
     # , 'triple_list': [('light', 'None', 'telephone')]}
     for line_index, line in tqdm(enumerate(iter(eval_data))):
-        # ############# 原始 #############
-        # Pred_triples = set(extract_items(subject_model, object_model, tokenizer, line['text'], id2rel))
-        # ############# 原始 #############
-
-        # ############# 更改 #############
         subject = line['triple_list'][0][0]
         object = line['triple_list'][0][2]
         Pred_triples = set(extract_items_new(subject=subject, object=object, object_model=object_model,
                                              tokenizer=tokenizer, text_in=line['text'], id2rel=id2rel))
-        # ############# 更改 #############
-
         Gold_triples = set(line['triple_list'])
 
         Pred_triples_eval, Gold_triples_eval = partial_match(Pred_triples, Gold_triples) if not exact_match else (

@@ -78,6 +78,65 @@ class Util(object):
             object = re.split('<e2>|</e2>', text)[1]
 
             text = text.strip('"')
+
+            e1_start_index = text.find('<e1>')
+            if (e1_start_index - 1) in range(len(text)) and text[e1_start_index - 1] not in [' ',
+                                                                                             '.',
+                                                                                             "'",
+                                                                                             ',',
+                                                                                             ';',
+                                                                                             '"',
+                                                                                             ':',
+                                                                                             '(',
+                                                                                             '-']:
+                print('\n')
+                print(text, subject)
+                text = text[:e1_start_index] + ' ' + text[e1_start_index:]
+                print(text)
+
+            e1_end_index = text.find('</e1>')
+            if (e1_end_index + len('</e1>')) in range(len(text)) and text[e1_end_index + len('</e1>')] not in [' ',
+                                                                                                               '.',
+                                                                                                               "'",
+                                                                                                               ',',
+                                                                                                               ';',
+                                                                                                               '"',
+                                                                                                               ':',
+                                                                                                               ')']:
+                print('\n')
+                print(text, subject)
+                text = text[:e1_end_index] + ' ' + text[e1_end_index:]
+                print(text)
+
+            e2_start_index = text.find('<e2>')
+            if (e2_start_index - 1) in range(len(text)) and text[e2_start_index - 1] not in [' ',
+                                                                                             '.',
+                                                                                             "'",
+                                                                                             ',',
+                                                                                             ';',
+                                                                                             '"',
+                                                                                             ':',
+                                                                                             '(',
+                                                                                             '-']:
+                print('\n')
+                print(text, object)
+                text = text[:e2_start_index] + ' ' + text[e2_start_index:]
+                print(text)
+
+            e2_end_index = text.find('</e2>')
+            if (e2_end_index + len('</e2>')) in range(len(text)) and text[e2_end_index + len('</e2>')] not in [' ',
+                                                                                                               '.',
+                                                                                                               "'",
+                                                                                                               ',',
+                                                                                                               ';',
+                                                                                                               '"',
+                                                                                                               ':',
+                                                                                                               ')']:
+                print('\n')
+                print(text, object)
+                text = text[:e2_end_index] + ' ' + text[e2_end_index:]
+                print(text)
+
             text = text.replace('<e1>' + subject + '</e1>', subject)
             text = text.replace('<e2>' + object + '</e2>', object)
 
@@ -196,11 +255,12 @@ class Util(object):
         text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
         print('text_length_count: {}'.format(text_length_count))
 
-# if __name__ == '__main__':
-#     util = Util()
-#
-#     util.generate_rel2id_json()
-#
-#     util.generate_train_dev_test_json()
-#
-#     util.generate_test_json()
+
+if __name__ == '__main__':
+    util = Util()
+
+    # util.generate_rel2id_json()
+
+    util.generate_train_dev_test_json()
+
+    # util.generate_test_json()

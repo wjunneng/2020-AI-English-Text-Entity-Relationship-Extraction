@@ -9,7 +9,6 @@ sys.path.append(project_dir)
 os.chdir(sys.path[0])
 
 import pandas as pd
-from tqdm import tqdm
 from collections import defaultdict
 import json
 import random
@@ -67,20 +66,12 @@ class Util(object):
         with open(self.rel2id_json_path, encoding='utf-8', mode='w') as file:
             json.dump(obj=[id2rel, rel2id], fp=file)
 
-    def generate_train_dev_test_json(self):
-        """
-        生成json文件
-        :return:
-        """
-        # 'text', 'label'
-        train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
-
-        text_length_count = defaultdict(lambda: 0)
-
+    @staticmethod
+    def get_result(df):
         result = []
-        for train_index in range(train_df.shape[0]):
-            text = train_df.iloc[train_index, 0]
-            label = train_df.iloc[train_index, 1]
+        for index in range(df.shape[0]):
+            text = df.iloc[index, 0]
+            label = df.iloc[index, 1]
 
             sample = {}
             subject = re.split('<e1>|</e1>', text)[1]
@@ -95,13 +86,61 @@ class Util(object):
 
             result.append(sample)
 
-            text_length_count[len(text.split(' '))] += 1
+        return result
 
-        random.shuffle(result)
+    def generate_train_dev_test_json(self):
+        """
+        生成json文件
+        :return:
+        """
+        # 'text', 'label'
+        train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
+        # train_df.shape[0]: 8573
+        print('train_df.shape[0]: {}'.format(train_df.shape[0]))
 
-        result_length = len(result)
-        train_result = result[:int(result_length * 0.8)]
-        dev_result = result[int(result_length * 0.8):]
+        """
+            Cause-Effect(e1,e2) 392
+            Cause-Effect(e2,e1) 691
+            Component-Whole(e1,e2) 492
+            Component-Whole(e2,e1) 501
+            Content-Container(e1,e2) 416
+            Content-Container(e2,e1) 168
+            Entity-Destination(e1,e2) 906
+            Entity-Origin(e1,e2) 632
+            Entity-Origin(e2,e1) 146
+            Instrument-Agency(e1,e2) 100
+            Instrument-Agency(e2,e1) 448
+            Member-Collection(e1,e2) 88
+            Member-Collection(e2,e1) 641
+            Message-Topic(e1,e2) 564
+            Message-Topic(e2,e1) 161
+            Other 1478
+            Product-Producer(e1,e2) 340
+            Product-Producer(e2,e1) 409
+        """
+        train, dev = None, None
+        for label, group_df in train_df.groupby(by=['label']):
+            group_df.sample(frac=1).reset_index(drop=True)
+
+            threshold = int(group_df.shape[0] * 0.85)
+            if train is None:
+                train = group_df[:threshold]
+                dev = group_df[threshold:]
+            else:
+                train = pd.concat([train, group_df[:threshold]], axis=0, ignore_index=True)
+                dev = pd.concat([dev, group_df[threshold:]], axis=0, ignore_index=True)
+
+        train.reset_index(inplace=True, drop=True)
+        dev.reset_index(inplace=True, drop=True)
+
+        # train.shape[0]: 7279, dev.shape[0]: 1294
+        print('train.shape[0]: {}, dev.shape[0]: {}'.format(train.shape[0], dev.shape[0]))
+
+        train_result = Util.get_result(df=train)
+        dev_result = Util.get_result(df=dev)
+
+        random.shuffle(train_result)
+        random.shuffle(dev_result)
 
         with open(self.train_json_path, encoding='utf-8', mode='w') as file:
             json.dump(obj=train_result, ensure_ascii=False, fp=file)
@@ -118,8 +157,6 @@ class Util(object):
         # (30, 61), (29, 89), (28, 123), (27, 137), (26, 169), (25, 227), (24, 233), (23, 280), (22, 329), (21, 356),
         # (20, 395), (19, 435), (18, 431), (17, 446), (16, 475), (15, 456), (14, 456), (13, 483), (12, 494), (11, 476),
         # (10, 427), (9, 419), (8, 372), (7, 236), (6, 105), (5, 26), (4, 7), (3, 1)]
-        text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
-        print('text_length_count: {}'.format(text_length_count))
 
     def generate_test_json(self):
         """
@@ -159,12 +196,11 @@ class Util(object):
         text_length_count = sorted(text_length_count.items(), key=lambda a: a[0], reverse=True)
         print('text_length_count: {}'.format(text_length_count))
 
-
-if __name__ == '__main__':
-    util = Util()
-
-    # util.generate_rel2id_json()
-
-    util.generate_train_dev_test_json()
-
-    # util.generate_test_json()
+# if __name__ == '__main__':
+#     util = Util()
+#
+#     util.generate_rel2id_json()
+#
+#     util.generate_train_dev_test_json()
+#
+#     util.generate_test_json()

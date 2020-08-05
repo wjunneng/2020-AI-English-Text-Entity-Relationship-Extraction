@@ -68,6 +68,7 @@ class Util(object):
 
     @staticmethod
     def get_result(df, test=False):
+        text_result = []
         result = []
         for index in range(df.shape[0]):
             if test:
@@ -144,12 +145,14 @@ class Util(object):
             text = text.replace('<e1>' + subject + '</e1>', subject)
             text = text.replace('<e2>' + object + '</e2>', object)
 
+            text_result.append(text)
+
             sample['text'] = text
             sample['triple_list'] = [[subject, label, object]]
 
             result.append(sample)
 
-        return result
+        return result, text_result
 
     def generate_train_dev_test_json(self):
         """
@@ -199,8 +202,8 @@ class Util(object):
         # train.shape[0]: 7279, dev.shape[0]: 1294
         print('train.shape[0]: {}, dev.shape[0]: {}'.format(train.shape[0], dev.shape[0]))
 
-        train_result = Util.get_result(df=train)
-        dev_result = Util.get_result(df=dev)
+        train_result, _ = Util.get_result(df=train)
+        dev_result, _ = Util.get_result(df=dev)
 
         random.shuffle(train_result)
         random.shuffle(dev_result)
@@ -227,11 +230,19 @@ class Util(object):
         :return:
         """
         test_df = pd.read_csv(self.test_csv_path, encoding='utf-8')
+        train_df = pd.read_csv(self.train_csv_path, encoding='utf-8')
 
-        result = Util.get_result(df=test_df, test=True)
+        _, test_result = Util.get_result(df=test_df, test=True)
+        _, train_result = Util.get_result(df=train_df)
+
+        for test_text in test_result:
+            if test_text in train_result:
+                print('\n')
+                print('---', test_text)
+
 
         with open(self.test_json_path, encoding='utf-8', mode='w') as file:
-            json.dump(obj=result, ensure_ascii=False, fp=file)
+            json.dump(obj=test_result, ensure_ascii=False, fp=file)
 
         # [(79, 1), (66, 1), (58, 1), (57, 1), (54, 1), (50, 1), (49, 1), (48, 1), (47, 3), (46, 1), (45, 1), (44, 3),
         # (43, 2), (42, 2), (41, 4), (40, 5), (39, 4), (38, 5), (37, 4), (36, 8), (35, 7), (34, 12), (33, 11), (32, 7),

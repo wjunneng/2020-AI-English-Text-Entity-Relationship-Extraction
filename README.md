@@ -4,3 +4,7 @@
 ![/image](/data/image/rule_0.png)
 
 ![/image](/data/image/rule_1.png)
+
+# refer:
+    SemEval2010_task8数据集
+    https://github.com/DongPoLI/EC-BERT

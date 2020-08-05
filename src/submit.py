@@ -45,7 +45,7 @@ if __name__ == '__main__':
     rel_dict_path = PATH.OUTPUT_DIR + '/rel2id.json'
     save_weights_path = PATH.OUTPUT_DIR + '/best_model.weights'
 
-    LR = 1e-5
+    LR = 2e-5
     tokenizer = get_tokenizer(bert_vocab_path)
     train_data, dev_data, test_data, id2rel, rel2id, num_rels = load_data(train_path, dev_path, test_path,
                                                                           rel_dict_path)

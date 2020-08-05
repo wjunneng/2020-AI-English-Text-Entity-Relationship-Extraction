@@ -102,9 +102,9 @@ class Evaluate(Callback):
             self.model.save_weights(self.save_weights_path)
         else:
             self.wait += 1
-            if self.wait >= self.patience:
-                self.stopped_epoch = epoch
-                self.model.stop_training = True
+            # if self.wait >= self.patience:
+            #     self.stopped_epoch = epoch
+            #     self.model.stop_training = True
         print('f1: %.4f, precision: %.4f, recall: %.4f, best f1: %.4f\n' % (f1, precision, recall, self.best))
 
     def on_train_end(self, logs=None):

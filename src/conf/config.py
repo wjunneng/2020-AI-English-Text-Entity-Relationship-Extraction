@@ -19,6 +19,7 @@ class PATH(object):
     train_csv_path = os.path.join(INPUT_DIR, 'train.csv')
     test_csv_path = os.path.join(INPUT_DIR, 'test.csv')
     test_file_full_txt_path = os.path.join(INPUT_DIR, 'TEST_FILE_FULL.TXT')
+    train_file_txt_path = os.path.join(INPUT_DIR, 'TRAIN_FILE.TXT')
 
     train_json_path = os.path.join(OUTPUT_DIR, 'train.json')
     dev_json_path = os.path.join(OUTPUT_DIR, 'dev.json')

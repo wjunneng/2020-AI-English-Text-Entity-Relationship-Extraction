@@ -34,6 +34,7 @@ class Util(object):
         self.rel2id_json_path = PATH.rel2id_json_path
         self.submit_csv_path = PATH.submit_csv_path
         self.recall_submit_csv_path = PATH.recall_submit_csv_path
+        self.train_file_txt_path = PATH.train_file_txt_path
 
     def generate_rel2id_json(self):
         """
@@ -264,6 +265,15 @@ class Util(object):
                     line_2 = lines[index - 3]
 
                     text_label_dict[line_1.split('\t')[1]] = line_2.strip()
+
+        # with open(self.train_file_txt_path, encoding='utf-8', mode='r') as file:
+        #     lines = file.readlines()
+        #
+        #     for index, line in enumerate(lines, start=1):
+        #         if index % 4 == 0:
+        #             line_1 = lines[index - 4].strip('\n')
+        #             line_2 = lines[index - 3]
+        #             text_label_dict[line_1.split('\t')[1]] = line_2.strip()
 
         true_label_list = []
         for index in range(test_df.shape[0]):

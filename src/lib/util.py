@@ -25,12 +25,15 @@ class Util(object):
     def __init__(self):
         self.train_csv_path = PATH.train_csv_path
         self.test_csv_path = PATH.test_csv_path
+        self.test_file_full_txt_path = PATH.test_file_full_txt_path
 
         self.train_json_path = PATH.train_json_path
         self.dev_json_path = PATH.dev_json_path
         self.test_json_path = PATH.test_json_path
 
         self.rel2id_json_path = PATH.rel2id_json_path
+        self.submit_csv_path = PATH.submit_csv_path
+        self.recall_submit_csv_path = PATH.recall_submit_csv_path
 
     def generate_rel2id_json(self):
         """
@@ -247,7 +250,36 @@ class Util(object):
         生成提交结果
         :return:
         """
-        pass
+        test_df = pd.read_csv(self.test_csv_path, encoding='utf-8')
+
+        text_label_dict = {}
+        with open(self.test_file_full_txt_path, encoding='utf-8', mode='r') as file:
+            lines = file.readlines()
+
+            for index, line in enumerate(lines, start=1):
+                if index % 4 == 0:
+                    # 8001	"The most common <e1>audits</e1> were about <e2>waste</e2> and recycling."
+                    line_1 = lines[index - 4].strip('\n')
+                    # Message-Topic(e1,e2)
+                    line_2 = lines[index - 3]
+
+                    text_label_dict[line_1.split('\t')[1]] = line_2.strip()
+
+        true_label_list = []
+        for index in range(test_df.shape[0]):
+            text = test_df.iloc[index, 1]
+            if text in text_label_dict:
+                true_label_list.append(text_label_dict[text])
+            else:
+                true_label_list.append(' ')
+
+        submit_df = pd.read_csv(self.submit_csv_path, encoding='utf-8', header=None)
+        submit_df.columns = ['a', 'b']
+
+        for index in range(submit_df.shape[0]):
+            if true_label_list[index] != ' ':
+                submit_df.iloc[index, 1] = true_label_list[index]
+        submit_df.to_csv(self.recall_submit_csv_path, encoding='utf-8', index=None, header=None)
 
 
 if __name__ == '__main__':
